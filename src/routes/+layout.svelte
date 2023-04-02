@@ -1,9 +1,10 @@
-<div class="text-base antialiased">
-	<slot />
-</div>
+<script>
+	import BrownianSynth from './BrownianSynth.svelte';
+</script>
 
-<style lang="postcss">
-	:global(body) {
-		@apply min-h-[100dvh] bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900;
-	}
-</style>
+<div class="min-h-[100dvh] bg-gray-950 text-base antialiased">
+	<div class="relative z-20">
+		<slot />
+	</div>
+	<BrownianSynth />
+</div>
