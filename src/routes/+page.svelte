@@ -5,7 +5,10 @@
 <div class="w-full max-w-prose space-y-8 p-10">
 	<h1 class="text-6xl font-medium text-emerald-100">mark fayngersh</h1>
 	<p class="text-2xl text-emerald-50">
-		i'm a software engineer who enjoys reading philosophy and making electronic music.
+		i'm a software engineer who enjoys reading philosophy, making electronic music, and writing <a
+			class="text-emerald-300"
+			href="/posts">posts</a
+		> on various topics.
 	</p>
 	<p class="text-2xl text-emerald-50">
 		tap anywhere on this page to listen to the brownian synth using the floating dots.

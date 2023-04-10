@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import BrownianSynth from './BrownianSynth.svelte';
 </script>
 
@@ -6,5 +7,7 @@
 	<div class="relative z-20">
 		<slot />
 	</div>
-	<BrownianSynth />
+	{#if !$page.url.pathname.startsWith('/posts')}
+		<BrownianSynth />
+	{/if}
 </div>

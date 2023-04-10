@@ -1,11 +1,15 @@
 <svelte:head>
-	<title>Mark Fayngersh | The Thinking Placebo</title>
+	<title>mark fayngersh | the thinking placebo</title>
+	<meta
+		name="description"
+		content="we may want to be wary of how our current epistemology of thinking confounds the progress being made and its implications."
+	/>
 </svelte:head>
 
 <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-3xl">
-		<div class="prose prose-green dark:prose-emerald lg:prose-xl dark:text-gray-200">
-			<h1 class="dark:text-gray-200">The Thinking Placebo</h1>
+		<div class="prose prose-xl prose-emerald text-emerald-50 lg:prose-2xl">
+			<h1 class="text-emerald-200">The Thinking Placebo</h1>
 			<p>
 				A lot of skepticism leveled at OpenAI's <a href="https://openai.com/blog/openai-api/"
 					>latest</a
