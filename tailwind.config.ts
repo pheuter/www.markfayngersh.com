@@ -8,7 +8,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Abhaya Libre', ...defaultTheme.fontFamily.sans]
+				sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
+				display: ['Clash Display', ...defaultTheme.fontFamily.sans]
 			}
 		}
 	},

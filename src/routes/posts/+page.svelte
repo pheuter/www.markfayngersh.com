@@ -8,16 +8,16 @@
 			<li class="space-y-2 py-4">
 				<a
 					href="/posts/the-thinking-placebo"
-					class="text-4xl font-semibold text-emerald-200 hover:text-emerald-300"
+					class="font-display text-4xl font-bold text-gray-600 dark:text-gray-300"
 				>
 					The Thinking Placebo
 				</a>
-				<p class="text-xl text-emerald-50">
+				<p class="text-xl text-gray-600 dark:text-gray-300">
 					The list of human abilities that computers cannot do is swiftly diminishing, and we may
 					want to be wary of how our current epistemology of thinking confounds the progress being
 					made and its implications.
 				</p>
-				<p class="mt-2 text-gray-400">July 21, 2020</p>
+				<p class="mt-2 text-gray-500 dark:text-gray-400">July 21, 2020</p>
 			</li>
 
 			<!-- Duplicate <li> here for more posts -->
