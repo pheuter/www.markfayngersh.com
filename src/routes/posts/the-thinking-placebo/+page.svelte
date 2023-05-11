@@ -10,12 +10,12 @@
 	<div class="prose prose-xl mx-auto dark:prose-invert lg:prose-2xl prose-headings:font-display">
 		<h1>The Thinking Placebo</h1>
 		<p>
-			A lot of skepticism leveled at OpenAI's <a href="https://openai.com/blog/openai-api/"
-				>latest</a
-			> text generator focuses on the notion that machines cannot think unless there is strong evidence
-			of their producing genuinely new things—while a novel advancement in AI, GPT-3 is essentially copy-paste
-			(albeit very clever and context-sensitive copy-paste) and ultimately does little, if anything,
-			to bridge the gap of cognition.
+			A lot of skepticism leveled at OpenAI's <a
+				href="https://platform.openai.com/docs/models/gpt-3">latest</a
+			> (as of writing) text generator focuses on the notion that machines cannot think unless there
+			is strong evidence of their producing genuinely new things—while a novel advancement in AI, GPT-3
+			is essentially copy-paste (albeit very clever and context-sensitive copy-paste) and ultimately
+			does little, if anything, to bridge the gap of cognition.
 		</p>
 		<p>
 			There are many things machines do today that, if they were done by human beings, we might be
