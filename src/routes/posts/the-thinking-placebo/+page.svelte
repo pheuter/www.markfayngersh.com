@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-24">
-	<div class="prose prose-xl mx-auto dark:prose-invert lg:prose-2xl prose-headings:font-display">
+	<div class="prose mx-auto dark:prose-invert lg:prose-lg prose-headings:font-display">
 		<h1>The Thinking Placebo</h1>
 		<p>
 			A lot of skepticism leveled at OpenAI's <a
