@@ -3,7 +3,7 @@
 	<meta name="description" content="Mark Fayngersh | Personal website" />
 </svelte:head>
 
-<div class="w-full max-w-prose space-y-8 p-10">
+<div class="w-full max-w-prose space-y-8 px-4 py-10 sm:px-6 lg:px-8">
 	<h1 class="font-serif text-5xl text-gray-800 dark:text-gray-100 sm:text-6xl">Mark Fayngersh</h1>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">
 		i'm a software engineer who enjoys philosophy, making electronic music, and <a
