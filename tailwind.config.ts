@@ -8,8 +8,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
-				display: ['Clash Display', ...defaultTheme.fontFamily.sans]
+				sans: ['Switzer', ...defaultTheme.fontFamily.sans],
+				serif: ['Gambarino', ...defaultTheme.fontFamily.serif]
 			}
 		}
 	},

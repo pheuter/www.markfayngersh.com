@@ -1,23 +1,38 @@
 <svelte:head>
-	<title>mark fayngersh | thoughts</title>
+	<title>Mark Fayngersh | Thoughts</title>
+	<meta name="description" content="Mark Fayngersh | Thoughts and posts" />
 </svelte:head>
 
 <div class="max-w-prose px-4 py-10 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-3xl">
+		<a class="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400" href="/">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 20 20"
+				fill="currentColor"
+				class="h-5 w-5"
+			>
+				<path
+					fill-rule="evenodd"
+					d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</a>
 		<ul class="divide-y divide-gray-200 dark:divide-gray-600">
-			<li class="space-y-2 py-4">
+			<li class="py-6">
 				<a
 					href="/posts/the-thinking-placebo"
-					class="font-display text-4xl font-bold text-gray-600 dark:text-gray-300"
+					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
 				>
 					The Thinking Placebo
 				</a>
-				<p class="text-xl text-gray-600 dark:text-gray-300">
+				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
 					The list of human abilities that computers cannot do is swiftly diminishing, and we may
 					want to be wary of how our current epistemology of thinking confounds the progress being
 					made and its implications.
 				</p>
-				<p class="mt-2 text-gray-500 dark:text-gray-400">July 21, 2020</p>
+				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
 			</li>
 
 			<!-- Duplicate <li> here for more posts -->
