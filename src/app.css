@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Spot Mono';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/fonts/Spot_Mono_Medium.woff') format('woff');
+	}
+}

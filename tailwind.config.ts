@@ -9,7 +9,8 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Switzer', ...defaultTheme.fontFamily.sans],
-				serif: ['Gambarino', ...defaultTheme.fontFamily.serif]
+				serif: ['Gambarino', ...defaultTheme.fontFamily.serif],
+				mono: ['Spot Mono', ...defaultTheme.fontFamily.mono]
 			}
 		}
 	},

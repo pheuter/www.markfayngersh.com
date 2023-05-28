@@ -1,6 +1,10 @@
+<svelte:head>
+	<link rel="stylesheet" href="/css/prism-vsc-dark-plus.css" />
+</svelte:head>
+
 <div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-24">
 	<div
-		class="prose mx-auto dark:prose-invert lg:prose-lg prose-headings:font-serif prose-headings:font-normal prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:font-medium dark:prose-a:text-blue-400"
+		class="prose mx-auto dark:prose-invert lg:prose-lg prose-headings:font-serif prose-headings:font-normal prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:font-medium prose-code:font-medium dark:prose-a:text-blue-400"
 	>
 		<a class="mb-4 inline-flex items-center gap-1" href="/posts">
 			<svg
