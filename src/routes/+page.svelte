@@ -15,13 +15,16 @@
 		tap anywhere on this page to listen to the brownian synth using the floating dots.
 	</p>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">
-		currently working on an ai-powered home care platform at <a
-			href="https://www.careswitch.com"
-			class="text-blue-600 hover:underline dark:text-blue-400">careswitch</a
+		in 2018 i founded careswitch with <a
+			href="https://twitter.com/Invisibilya"
+			class="text-blue-600 hover:underline dark:text-blue-400">ilya</a
+		>, an ai-powered home care
+		<a href="https://www.careswitch.com/" class="text-blue-600 hover:underline dark:text-blue-400"
+			>startup</a
 		>.
 	</p>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">
-		if you want to get in touch, you can send me an email <a
+		want to get in touch? send me an email <a
 			class="text-blue-600 hover:underline dark:text-blue-400"
 			href="mailto:heymarfay@icloud.com">here</a
 		>.
