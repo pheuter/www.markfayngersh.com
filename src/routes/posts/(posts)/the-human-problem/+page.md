@@ -1,22 +1,22 @@
 <svelte:head>
 
 <title>Mark Fayngersh | The Human Problem</title>
-<meta name="description" content="In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of superintelligence." />
+<meta name="description" content="In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of the presence of superintelligence." />
 <meta name="author" content="Mark Fayngersh" />
 
 </svelte:head>
 
 # The Human Problem
 
-In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of superintelligence.
+In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of the presence of superintelligence.
 
 ## A Retrospective
 
-Tremendous progress has been made in the last three years since I initially wrote about GPT-3's early hints at sophistication. Some of the greatest intellectuals and skeptics have felt compelled to [confront](https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html) (_Noam Chomsky: The False Promise of ChatGPT_) the growing capabilities of generative AI, effectively recycling arguments that boil down to a disagreement around what exactly we mean by ["thinking"](/posts/the-thinking-placebo). That NYT opinion piece was published just a few days before OpenAI announced their significantly more capable GPT-4 model—many of the article's intuitions haven't aged well, perhaps unsurprisingly.
+Tremendous progress has been made in the last three years since I initially wrote about GPT-3's early hints at sophistication, though not without an accompanying stream of conceptual roadblocks. Some of the greatest intellectuals and skeptics have felt compelled to [confront](https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html) (_Noam Chomsky: The False Promise of ChatGPT_) the growing capabilities of generative AI, recycling arguments that boil down to a disagreement around what exactly we mean by ["thinking"](/posts/the-thinking-placebo). That NYT opinion piece was published just a few days before OpenAI announced their significantly more capable GPT-4 model—some of the article's intuitions haven't aged well, perhaps unsurprisingly.
 
-Let's revisit one of the examples put forth by Dr. Watumull designed to elicit moral reasoning, **"Would it be moral to terraform Mars?"**.
+Let's revisit one of the examples put forth by Dr. Watumull designed to elicit moral insights, **"Would it be moral to terraform Mars?"**.
 
-Here is the original response quoted by the article that was produced by earlier versions of ChatGPT:
+Here is the original response quoted in the article that was produced by earlier versions of ChatGPT:
 
 > The morality of terraforming Mars is a complex and controversial topic that has been debated by scientists, philosophers, and ethicists. Some argue that it would be morally justifiable to terraform Mars in order to provide a new habitable environment for humans and other life forms, while others argue that it would be morally wrong to fundamentally alter the planet's natural state. Ultimately, whether or not terraforming Mars is considered moral would depend on one's perspective on the value of preserving the natural state of other planets and the potential consequences of altering them.
 
@@ -33,6 +33,6 @@ And [here](https://chat.openai.com/share/76ea1e6d-c467-4df8-9be8-77a37c6c87db) i
 >
 > The question of terraforming Mars is not simply a matter of can we, but should we. The answer to that question depends heavily on one's ethical framework and values. It also depends on the future discoveries about Mars, such as the potential existence of life there. Further exploration and understanding of the Martian environment will undoubtedly inform these debates.
 
-Looking back, perhaps the conclusion reached in the article referring to AI like ChatGPT that _"we can only laugh or cry at their popularity"_ as evident by _"the moral indifference born of unintelligence"_ was a bit premature.
+Looking back, the conclusion reached in the article referring to AI like ChatGPT that _"we can only laugh or cry at their popularity"_ as made evident by _"the moral indifference born of unintelligence"_ may have been somewhat premature.
 
-Still, the article makes some good points that can't be easily dismissed. Counterfactual reasoning and intuitions about causality are essential components of human intellect, and it remains unclear to what degree, if at all, transformer-based models are capable of interpreting and reasoning about reality
+Still, the article makes some valid points that can't be easily dismissed. Counterfactual reasoning and intuitions about causality are fundamental components of human experience, and it remains unclear to what degree transformer-based models are capable of interpreting and reasoning about reality like we do.
