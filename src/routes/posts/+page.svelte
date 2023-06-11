@@ -22,6 +22,21 @@
 		<ul class="divide-y divide-gray-200 dark:divide-gray-600">
 			<li class="py-6">
 				<a
+					href="/posts/the-human-problem"
+					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
+				>
+					The Human Problem
+				</a>
+				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
+					In order for society to truly embrace the challenge of building AI systems that are
+					aligned with our goals and values, we must first reckon with perennial questions about
+					morality and ethics, and pave a durable way forward regardless of superintelligence.
+				</p>
+				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">June 11, 2023</p>
+			</li>
+
+			<li class="py-6">
+				<a
 					href="/posts/the-thinking-placebo"
 					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
 				>
@@ -34,8 +49,6 @@
 				</p>
 				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
 			</li>
-
-			<!-- Duplicate <li> here for more posts -->
 		</ul>
 	</div>
 </div>
