@@ -1,6 +1,6 @@
 // @ts-check
 
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 
@@ -8,7 +8,7 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	extensions: ['.svelte', '.md'],
 	preprocess: [vitePreprocess(), mdsvex({ extensions: ['.md'] })],
-	kit: { adapter: adapter({ runtime: 'edge' }) }
+	kit: { adapter: adapter() }
 };
 
 export default config;
