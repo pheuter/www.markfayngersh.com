@@ -12,15 +12,15 @@ In order for society to truly embrace the challenge of building AI systems that 
 
 ## A Retrospective
 
-Tremendous progress has been made in the last three years since I initially wrote about GPT-3's early hints at sophistication, though not without an accompanying stream of conceptual roadblocks. Some of the greatest intellectuals and skeptics have felt compelled to [confront](https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html) (_Noam Chomsky: The False Promise of ChatGPT_) the growing capabilities of generative AI, recycling arguments that boil down to a disagreement around what exactly we mean by ["thinking"](/posts/the-thinking-placebo). That NYT opinion piece was published just a few days before OpenAI announced their significantly more capable GPT-4 model—some of the article's intuitions haven't aged well, perhaps unsurprisingly.
+Tremendous progress has been made in the last three years since I wrote about GPT-3's early hints at sophistication, though not without an accompanying stream of conceptual roadblocks. Some of the greatest intellectuals and skeptics have felt compelled to [confront](https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html) (_Noam Chomsky: The False Promise of ChatGPT_) the growing capabilities of generative AI, recycling arguments that boil down to a disagreement around exactly what we mean by ["thinking"](/posts/the-thinking-placebo). The NYT opinion piece was published just a few days before OpenAI announced their significantly more capable GPT-4 model—perhaps unsurprisingly, some of the article's insights haven't aged well.
 
-Let's revisit one of the examples put forth by Dr. Watumull designed to elicit moral insights, **"Would it be moral to terraform Mars?"**.
+Let's revisit one of the examples put forth by Dr. Watumull designed to elicit moral intuitions, **"Would it be moral to terraform Mars?"**.
 
 Here is the original response quoted in the article that was produced by earlier versions of ChatGPT:
 
 > The morality of terraforming Mars is a complex and controversial topic that has been debated by scientists, philosophers, and ethicists. Some argue that it would be morally justifiable to terraform Mars in order to provide a new habitable environment for humans and other life forms, while others argue that it would be morally wrong to fundamentally alter the planet's natural state. Ultimately, whether or not terraforming Mars is considered moral would depend on one's perspective on the value of preserving the natural state of other planets and the potential consequences of altering them.
 
-And [here](https://chat.openai.com/share/76ea1e6d-c467-4df8-9be8-77a37c6c87db) is a response from GPT-4:
+And [here](https://chat.openai.com/share/76ea1e6d-c467-4df8-9be8-77a37c6c87db) is a more recent response from GPT-4:
 
 > The question of the morality of terraforming Mars hinges on various ethical, philosophical, and practical considerations. Here are a few of the major viewpoints to consider:
 >
@@ -33,6 +33,6 @@ And [here](https://chat.openai.com/share/76ea1e6d-c467-4df8-9be8-77a37c6c87db) i
 >
 > The question of terraforming Mars is not simply a matter of can we, but should we. The answer to that question depends heavily on one's ethical framework and values. It also depends on the future discoveries about Mars, such as the potential existence of life there. Further exploration and understanding of the Martian environment will undoubtedly inform these debates.
 
-Looking back, the conclusion reached in the article referring to AI like ChatGPT that _"we can only laugh or cry at their popularity"_ as made evident by _"the moral indifference born of unintelligence"_ may have been somewhat premature.
+Looking back, the conclusion reached in the article referring to AI like ChatGPT that _"we can only laugh or cry at their popularity"_ as made evident by _"the moral indifference born of unintelligence"_ may have been somewhat premature, yet valid concerns persist. Counterfactual reasoning and intuitions about causality are fundamental components of human experience; it remains unclear to what degree large language models are capable of interpreting and scientifically reasoning about reality like us, and even less clear whether any kind of subjective experience accompanies these systems. Is there something [that it's like](https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F) to be an LLM? How can we steer it towards humans' intended goals, preferences, and ethical principles?
 
-Still, the article makes some valid points that can't be easily dismissed. Counterfactual reasoning and intuitions about causality are fundamental components of human experience, and it remains unclear to what degree transformer-based models are capable of interpreting and reasoning about reality like we do.
+These are difficult questions with consequential answers, but as it turns out the biggest roadblock to AI safety has little to do with AI itself. The problem of superintelligence isn't that we will build systems that disregard or marginalize human values, rather that we will disagree on what those values should be.
