@@ -30,8 +30,7 @@
 				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
 					In order for society to truly embrace the challenge of building AI systems that are
 					aligned with our goals and values, we must first reckon with perennial questions about
-					morality and ethics, and pave a durable way forward regardless of the presence of
-					superintelligence.
+					human morality and ethics.
 				</p>
 				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">June 11, 2023</p>
 			</li>

@@ -1,14 +1,14 @@
 <svelte:head>
 
 <title>Mark Fayngersh | The Human Problem</title>
-<meta name="description" content="In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of the presence of superintelligence." />
+<meta name="description" content="In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about human morality and ethics." />
 <meta name="author" content="Mark Fayngersh" />
 
 </svelte:head>
 
 # The Human Problem
 
-In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about morality and ethics, and pave a durable way forward regardless of the presence of superintelligence.
+In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about human morality and ethics.
 
 ## A Retrospective
 
