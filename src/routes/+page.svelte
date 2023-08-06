@@ -16,7 +16,7 @@
 	</p>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">
 		in 2018 i founded careswitch with <a
-			href="https://twitter.com/Invisibilya"
+			href="https://www.linkedin.com/in/ilyvak/"
 			class="text-blue-600 hover:underline dark:text-blue-400">ilya</a
 		>, an ai-powered home care
 		<a href="https://www.careswitch.com/" class="text-blue-600 hover:underline dark:text-blue-400"

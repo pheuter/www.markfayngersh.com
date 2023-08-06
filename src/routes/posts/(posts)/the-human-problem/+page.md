@@ -8,6 +8,8 @@
 
 # The Human Problem
 
+<p class="lead">August 6, 2023</p>
+
 In order for society to truly embrace the challenge of building AI systems that are aligned with our goals and values, we must first reckon with perennial questions about human morality and ethics.
 
 ## A Retrospective
@@ -36,3 +38,21 @@ And [here](https://chat.openai.com/share/76ea1e6d-c467-4df8-9be8-77a37c6c87db) i
 Looking back, the conclusion reached in the article referring to AI like ChatGPT that _"we can only laugh or cry at their popularity"_ as made evident by _"the moral indifference born of unintelligence"_ may have been somewhat premature, yet valid concerns persist. Counterfactual reasoning and intuitions about causality are fundamental components of human experience; it remains unclear to what degree large language models are capable of interpreting and scientifically reasoning about reality like us, and even less clear whether any kind of subjective experience accompanies these systems. Is there something [that it's like](https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F) to be an LLM? How can we steer it towards humans' intended goals, preferences, and ethical principles?
 
 These are difficult questions with consequential answers, but as it turns out the biggest roadblock to AI safety has little to do with AI itself. The problem of superintelligence isn't that we will build systems that disregard or marginalize human values, rather that we will disagree on what those values should be.
+
+## A Primer
+
+While AI alignment is a budding field of research, we can trace philosophical debate about living the good life back to ancient civilizations from thousands of years ago with thinkers who had a profound influence on the development of ethics and values as we understand them today.
+
+Socrates was one of the earliest Western philosophers to grapple with these questions. He proposed that virtue is the highest form of good and that the virtuous person is the happiest, as virtue brings harmony of the soul. He didn't leave behind any writings of his own, but through Plato's dialogues, we learn about his teachings and the Socratic method of inquiry.
+
+Plato advanced the ethical conversation with his own ideas, such as the notion of Forms. He proposed that abstract concepts like Good, Beauty, and Justice exist as perfect Forms in another realm, and the material world is just an imperfect copy of that. We can better understand this through his famous _Allegory of the Cave:_
+
+> Plato presents the scenario where individuals are chained in a cave from birth, facing the wall, and can only see the shadows of objects cast on the wall by a fire behind them. These shadows represent the imperfect perceptions of the world that people have based on their limited sensory experiences. One of the individuals escapes the cave, and when he sees the world outside, he is initially blinded by the sunlight, but as his eyes adjust, he realizes that this outside world is the true reality and the shadows in the cave are merely illusions.
+
+For Plato, our world is like the cave and our perceptions are like the shadows. The Forms are the realities we would perceive if we could escape the cave and see the world illuminated by the sun (the Form of the Good). To live an ethical life is to strive to apprehend these Forms, through philosophy, and let this understanding guide our actions.
+
+And then there is Aristotle, who diverged from his teacher Plato in several significant ways, and whose virtue ethics influenced later philosophers and remains a cornerstone of philosophical moral thought to this day. Where Plato was all about the world of ideal Forms, Aristotle was more down-to-earth. He focused on the world we experience, and his ethics reflect that.
+
+In his work _Nicomachean Ethics_, Aristotle presents his concept of _eudaimonia_, often translated as "happiness" or "flourishing". Eudaimonia is the ultimate goal of human life according to Aristotle, and it's achieved by living a life of virtue. Virtues are character traits that help us live well and flourish. They are developed through habit and practice, much like skills. Importantly, they lie at a mean between extremes. For example, courage, a virtue, lies between recklessness (an excess) and cowardice (a deficiency). The virtuous person is the one who can find and act according to this mean.
+
+Another significant aspect of Aristotle's ethics is the role of practical wisdom, or _phronesis_. This is the ability to deliberate and judge well in matters of action and conduct, and it's critical to living a virtuous and fulfilling life. You can't just memorize a rule book and become virtuous—you need to be able to apply principles wisely in different situations.

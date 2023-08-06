@@ -11,6 +11,8 @@
 
 # The Thinking Placebo
 
+<p class="lead">July 21, 2020</p>
+
 A lot of skepticism leveled at OpenAI's [latest](https://platform.openai.com/docs/models/gpt-3) (as of writing) text generator focuses on the notion that machines cannot think unless there
 is strong evidence of their producing genuinely new things—while a novel advancement in AI, GPT-3
 is essentially copy-paste (albeit very clever and context-sensitive copy-paste) and ultimately
@@ -32,7 +34,7 @@ One interesting question isn't whether computer programs are actually capable of
 rather if what we consider to be thinking is possibly more banal and
 [substrate-independent](https://www.edge.org/response-detail/27126). If we reduce
 our conceptual model of thinking to materialist hardware that processes inputs, forms
-patterns, and generates outputs then the actual hardware should at least in theory become less
+patterns, and generates outputs then the actual hardware should, at least in theory, become less
 and less interesting as the outputs become more and more robust. This is after all the main
 premise of the Turing Test—the differences between a computer program and a human thinker are
 less important than the ability to differentiate between the human and the program in the
@@ -46,4 +48,4 @@ want to be wary of how our current epistemology of thinking confounds the progre
 
 Perhaps GPT-3 and the class of AI it represents is a kind of placebo, and much like its
 pharmaceutical counterpart who's mechanisms of action are not always fully understood, the
-effects are no less real and possibly **just as important**.
+effects are no less real and possibly just as important.
