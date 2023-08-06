@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import BrownianSynth from './BrownianSynth.svelte';
+	import BrownianSynth from '$lib/components/BrownianSynth.svelte';
 </script>
 
 <div class="min-h-[100dvh] bg-gray-50 text-base antialiased dark:bg-gray-950">

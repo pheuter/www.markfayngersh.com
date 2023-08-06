@@ -1,3 +1,7 @@
+<script lang="ts">
+    import Tooltip from '$lib/components/Tooltip.svelte';
+</script>
+
 <svelte:head>
 
 <title>Mark Fayngersh | The Human Problem</title>
@@ -41,7 +45,7 @@ These are difficult questions with consequential answers, but as it turns out th
 
 ## A Primer
 
-While AI alignment is a budding field of research, we can trace philosophical debate about living the good life back to ancient civilizations from thousands of years ago with thinkers who had a profound influence on the development of ethics and values as we understand them today.
+While AI alignment is a budding field of research, we can trace philosophical debate about living the good life back thousands of years to ancient civilizations and thinkers who had a profound influence on the development of ethics and values as we understand them today.
 
 Socrates was one of the earliest Western philosophers to grapple with these questions. He proposed that virtue is the highest form of good and that the virtuous person is the happiest, as virtue brings harmony of the soul. He didn't leave behind any writings of his own, but through Plato's dialogues, we learn about his teachings and the Socratic method of inquiry.
 
@@ -51,8 +55,8 @@ Plato advanced the ethical conversation with his own ideas, such as the notion o
 
 For Plato, our world is like the cave and our perceptions are like the shadows. The Forms are the realities we would perceive if we could escape the cave and see the world illuminated by the sun (the Form of the Good). To live an ethical life is to strive to apprehend these Forms, through philosophy, and let this understanding guide our actions.
 
-And then there is Aristotle, who diverged from his teacher Plato in several significant ways, and whose virtue ethics influenced later philosophers and remains a cornerstone of philosophical moral thought to this day. Where Plato was all about the world of ideal Forms, Aristotle was more down-to-earth. He focused on the world we experience, and his ethics reflect that.
+And then there is Aristotle, who diverged from his teacher Plato in several significant ways, and whose virtue ethics influenced <Tooltip border>later philosophers<svelte:fragment slot=tooltip>hello, world. It's actually kind of cool to consider that there are certain philosophers, like St. Thomas Aquinas, who have built on Artistotle's foundations to posit...</svelte:fragment></Tooltip> and remains a cornerstone of philosophical moral thought to this day. Where Plato was all about the world of ideal Forms, Aristotle was more down-to-earth. He focused on the world we experience, and his ethics reflect that.
 
-In his work _Nicomachean Ethics_, Aristotle presents his concept of _eudaimonia_, often translated as "happiness" or "flourishing". Eudaimonia is the ultimate goal of human life according to Aristotle, and it's achieved by living a life of virtue. Virtues are character traits that help us live well and flourish. They are developed through habit and practice, much like skills. Importantly, they lie at a mean between extremes. For example, courage, a virtue, lies between recklessness (an excess) and cowardice (a deficiency). The virtuous person is the one who can find and act according to this mean.
+In his seminal work _Nicomachean Ethics_, Aristotle presents his concept of _eudaimonia_, often translated as "happiness" or "flourishing". Eudaimonia is the ultimate goal of human life according to Aristotle, and it's achieved by living a life of virtue. Virtues are character traits that help us live well and flourish. They are developed through habit and practice, much like skills. Importantly, they lie at a mean between extremes. For example, courage, a virtue, lies between recklessness (an excess) and cowardice (a deficiency). The virtuous person is the one who can find and act according to this mean.
 
-Another significant aspect of Aristotle's ethics is the role of practical wisdom, or _phronesis_. This is the ability to deliberate and judge well in matters of action and conduct, and it's critical to living a virtuous and fulfilling life. You can't just memorize a rule book and become virtuous—you need to be able to apply principles wisely in different situations.
+Another significant aspect of Aristotle's ethics is the role of practical wisdom, or _phronesis_. This is the ability to deliberate and judge well in matters of action and conduct, and it's critical to living a virtuous and fulfilling life. You can't just memorize a rule book and become virtuous—you need to be able to apply principles judiciously in different situations.
