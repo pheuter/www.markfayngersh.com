@@ -60,7 +60,7 @@
 	</div>
 
 	<div
-		class="z-10 bg-gray-200 p-2 rounded absolute w-max dark:bg-gray-800"
+		class="z-10 bg-gray-200 p-2 rounded shadow-lg absolute w-max dark:bg-gray-800"
 		class:hidden={!visible}
 		style:left="{tooltipX}px"
 		style:top="{tooltipY}px"
