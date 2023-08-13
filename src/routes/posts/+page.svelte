@@ -35,19 +35,21 @@
 				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 6, 2023</p>
 			</li>
 
+			<hr />
+
 			<li>
 				<a
 					href="/posts/the-thinking-placebo"
-					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
+					class="font-serif text-2xl text-blue-600 hover:underline dark:text-blue-400"
 				>
 					The Thinking Placebo
 				</a>
-				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
+				<p class="mt-4 text-base font-light text-gray-800 dark:text-gray-200">
 					The list of human abilities that computers cannot do is swiftly diminishing, and we may
 					want to be wary of how our current epistemology of thinking confounds the progress being
 					made and its implications.
 				</p>
-				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
+				<p class="mt-2 text-sm font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
 			</li>
 		</ul>
 	</div>
