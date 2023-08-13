@@ -61,6 +61,15 @@ In his seminal work _Nicomachean Ethics_, Aristotle presents his concept of euda
 
 Another significant aspect of Aristotle's ethics is the role of practical wisdom, or phronesis. This is the ability to deliberate and judge well in matters of action and conduct, and it's critical to living a virtuous and fulfilling life. You can't just memorize a rule book and become virtuous—you need to be able to apply principles judiciously in different situations.
 
----
+This idea of phronesis should resonate when we consider AI alignment. Handing an AI a "rule book" of ethics, no matter how comprehensive, would be akin to expecting moral perfection from someone who has merely memorized philosophical tenets. Just as humans require discernment and practical wisdom to navigate the nuances of ethical dilemmas, AI systems will require a framework that allows for flexibility, adaptation, and context-aware judgment. This underscores the importance of a dynamic approach to AI ethics, one that evolves and learns from diverse scenarios and challenges, much like human moral reasoning does.
 
-At this point it might be tempting to
+Let's consider one example of a seemingly good and innocuous rule: always provide balanced viewpoints in discussions. On the surface, this seems like a reasonable directive, especially in a world yearning for objective discussions, particularly on platforms governed by algorithms like news aggregators or social media feeds. It aims to prevent biases and promote healthy discourse. However, it doesn't take long for complications to arise:
+
+- What does "balanced" mean? Does it imply equal representation of all viewpoints, regardless of their factual accuracy or societal acceptance? Would this mean climate change denial should be presented as equally valid as the overwhelming scientific consensus?
+- For many topics, there aren't just two sides to the story. Some issues have multiple valid perspectives. How do we decide which of these many viewpoints to present for true balance?
+- At what point does a topic become "controversial" and thus require a balanced treatment? We might excessively neutralize conversations that could benefit from a more pointed perspective.
+- What's deemed controversial or acceptable tends to change over time. It behooves us to adapt to shifting societal norms without holding onto outdated views, but how do we avoid being too reactive to short-lived trends?
+
+The central premise of this post is that these ethical complications do not presuppose superintelligence—we face genuinely difficult moral problems to navigate regardless of whether AI is in the picture. _[Expand on Habermas, Lifeworld, and Communicative Action here to set the stage for next paragraph on public sphere and conversations and objective morality via the moral landscape: https://chat.openai.com/c/115eb000-486a-4a5f-821a-260f9ccfe51f]_
+
+To further sharpen our intuitions around what kind of conversations we want to have with each other and the principles that should guide them, we may need a more ambitious and holistic understanding of morality, one that deviates from ancient ideas of virtue ethics and attempts to elevate morality to the preeminent status of scientific fact.
