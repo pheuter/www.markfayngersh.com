@@ -51,24 +51,24 @@
 
 <div
 	role="tooltip"
-	class="inline-block p-0.5 -m-0.5"
+	class="-m-0.5 inline-block p-0.5"
 	on:mouseenter={() => (visible = true)}
 	on:mouseleave={() => (visible = false)}
 >
-	<div class="border-dashed border-gray-400" class:border-b={border} bind:this={contentEl}>
+	<div class="border-dashed border-slate-400" class:border-b={border} bind:this={contentEl}>
 		<slot />
 	</div>
 
 	<div
-		class="z-10 bg-gray-200 p-2 rounded shadow-lg absolute w-max dark:bg-gray-800"
+		class="absolute z-10 w-max rounded bg-slate-200 p-2 shadow-md dark:bg-slate-800"
 		class:hidden={!visible}
 		style:left="{tooltipX}px"
 		style:top="{tooltipY}px"
 		bind:this={tooltipEl}
 	>
-		<p class="!m-0 max-w-sm text-sm text-gray-800 font-medium dark:text-gray-200">
+		<p class="!m-0 max-w-sm text-sm font-medium text-slate-700 dark:text-slate-200">
 			<slot name="tooltip" />
 		</p>
-		<div class="absolute bg-gray-200 w-2 h-2 rotate-45 dark:bg-gray-800" bind:this={arrowEl} />
+		<div class="absolute h-2 w-2 rotate-45 bg-slate-200 dark:bg-slate-800" bind:this={arrowEl} />
 	</div>
 </div>

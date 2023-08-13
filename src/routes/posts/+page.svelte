@@ -19,8 +19,8 @@
 				/>
 			</svg>
 		</a>
-		<ul class="divide-y divide-gray-200 dark:divide-gray-600">
-			<li class="py-6">
+		<ul class="mt-4 space-y-16">
+			<li>
 				<a
 					href="/posts/the-human-problem"
 					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
@@ -35,7 +35,7 @@
 				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 6, 2023</p>
 			</li>
 
-			<li class="py-6">
+			<li>
 				<a
 					href="/posts/the-thinking-placebo"
 					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
