@@ -68,7 +68,7 @@ Let's consider one example of a seemingly beneficial and innocuous rule: always 
 - At what point does a topic become "controversial" and thus require a balanced treatment? We might excessively neutralize conversations that could benefit from a more pointed perspective.
 - What's deemed controversial or acceptable tends to change over time. It may behoove us to adapt to shifting societal norms without holding onto outdated views, but how do we avoid being too reactive to short-lived trends?
 
-The central premise of this post is that these ethical complications do not presuppose superintelligence—we face genuinely difficult moral problems to navigate regardless of whether we're conversing with AI or each other. To further sharpen our intuitions around the kinds of conversations we want to have and the principles that should guide them, we may need a more ambitious and objective framework, one that builds upon formative ideas of virtue ethics and strives to elevate morality to the preeminent status of scientific fact.
+The central premise of this post is that these ethical complications do not presuppose superintelligence—we must navigate genuinely difficult moral problems regardless of whether we're conversing with AI or each other. To further sharpen our intuitions around the kinds of conversations we want to have and the principles that should guide them, we may need a more ambitious and objective framework, one that builds upon formative ideas of virtue ethics and strives to elevate morality to the preeminent status of scientific fact.
 
 ## A Divide
 
