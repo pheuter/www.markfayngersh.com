@@ -28,9 +28,9 @@
 					The Human Problem
 				</a>
 				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
-					In order for society to truly embrace the challenge of building AI systems that are
-					aligned with our goals and values, we must first reckon with perennial questions about
-					human morality and ethics.
+					In order for society to truly embrace the challenge of building AI systems that align with
+					our goals and values, we must first reckon with perennial questions about human morality
+					and ethics.
 				</p>
 				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 6, 2023</p>
 			</li>
