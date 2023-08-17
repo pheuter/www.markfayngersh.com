@@ -32,7 +32,7 @@
 					our goals and values, we must first reckon with perennial questions about human morality
 					and ethics.
 				</p>
-				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 6, 2023</p>
+				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 17, 2023</p>
 			</li>
 
 			<hr />

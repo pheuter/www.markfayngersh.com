@@ -12,7 +12,7 @@
 
 # The Human Problem
 
-<p class="lead">August 6, 2023</p>
+<p class="lead">August 17, 2023</p>
 
 In order for society to truly embrace the challenge of building AI systems that align with our goals and values, we must first reckon with perennial questions about human morality and ethics.
 
