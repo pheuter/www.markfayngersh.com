@@ -19,23 +19,38 @@
 				/>
 			</svg>
 		</a>
-		<ul class="divide-y divide-gray-200 dark:divide-gray-600">
-			<li class="py-6">
+		<ul class="mt-4 space-y-16">
+			<li>
+				<a
+					href="/posts/the-human-problem"
+					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
+				>
+					The Human Problem
+				</a>
+				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
+					In order for society to truly embrace the challenge of building AI systems that align with
+					our goals and values, we must first reckon with perennial questions about human morality
+					and ethics.
+				</p>
+				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">August 17, 2023</p>
+			</li>
+
+			<hr />
+
+			<li>
 				<a
 					href="/posts/the-thinking-placebo"
-					class="font-serif text-4xl text-blue-600 hover:underline dark:text-blue-400"
+					class="font-serif text-2xl text-blue-600 hover:underline dark:text-blue-400"
 				>
 					The Thinking Placebo
 				</a>
-				<p class="mt-4 text-lg font-light text-gray-800 dark:text-gray-200">
+				<p class="mt-4 text-base font-light text-gray-800 dark:text-gray-200">
 					The list of human abilities that computers cannot do is swiftly diminishing, and we may
 					want to be wary of how our current epistemology of thinking confounds the progress being
 					made and its implications.
 				</p>
-				<p class="mt-2 font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
+				<p class="mt-2 text-sm font-normal text-gray-800 dark:text-gray-400">July 21, 2020</p>
 			</li>
-
-			<!-- Duplicate <li> here for more posts -->
 		</ul>
 	</div>
 </div>
