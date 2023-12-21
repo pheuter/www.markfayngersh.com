@@ -4,11 +4,12 @@
 </svelte:head>
 
 <div class="w-full max-w-xl space-y-8 px-4 py-10 sm:px-6 lg:px-8">
-	<h1 class="font-serif text-5xl text-gray-800 dark:text-gray-100 sm:text-6xl">Mark Fayngersh</h1>
+	<h1 class="font-serif text-5xl text-gray-800 sm:text-6xl dark:text-gray-100">Mark Fayngersh</h1>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">
 		i'm a software engineer who enjoys philosophy, making electronic music, and <a
-			class="text-blue-600 hover:underline dark:text-blue-400"
-			href="/posts">writing</a
+			rel="external"
+			href="https://markfayngersh.substack.com"
+			class="text-blue-600 hover:underline dark:text-blue-400">writing</a
 		> on various topics.
 	</p>
 	<p class="text-xl font-light text-gray-800 dark:text-gray-200">

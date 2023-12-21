@@ -3,7 +3,7 @@
 	import BrownianSynth from '$lib/components/BrownianSynth.svelte';
 </script>
 
-<div class="min-h-[100dvh] bg-gray-50 text-base antialiased dark:bg-gray-950">
+<div class="min-h-dvh bg-gray-50 text-base antialiased dark:bg-gray-950">
 	<div class="relative z-20">
 		<slot />
 	</div>
