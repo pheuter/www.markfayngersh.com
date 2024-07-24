@@ -8,6 +8,7 @@ export default function Home() {
     <div className="mx-auto max-w-4xl py-16 px-4 md:py-32">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <Image
+          priority
           className="w-80 h-full"
           alt="Profile picture of Mark"
           src={profilePic}
