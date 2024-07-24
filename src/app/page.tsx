@@ -22,7 +22,7 @@ export default function Home() {
             audiences at the MIT Media Lab.
           </p>
           <p>
-            <Link href="/blog">Blog</Link>
+            <Link href="/posts">Blog</Link>
           </p>
         </div>
       </div>
