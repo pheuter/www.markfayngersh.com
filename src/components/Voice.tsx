@@ -2,8 +2,14 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import {
+  PlayIcon,
+  RadiobuttonIcon,
+  SpeakerLoudIcon,
+  UpdateIcon,
+} from "@radix-ui/react-icons";
 
-type Status = "idle" | "recording" | "loading" | "dictating";
+type Status = "idle" | "recording" | "loading" | "ready" | "dictating";
 
 interface Props {
   article: string;
@@ -11,10 +17,12 @@ interface Props {
 
 export default function Voice({ article }: Props) {
   const [status, setStatus] = useState<Status>("idle");
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const startRecording = useCallback(async () => {
     try {
@@ -68,16 +76,9 @@ export default function Voice({ article }: Props) {
       }
 
       const responseAudioBlob = await response.blob();
-      const audioUrl = URL.createObjectURL(responseAudioBlob);
-      const audio = new Audio(audioUrl);
-
-      audio.addEventListener("ended", () => {
-        setStatus("idle");
-        URL.revokeObjectURL(audioUrl);
-      });
-
-      setStatus("dictating");
-      await audio.play();
+      const url = URL.createObjectURL(responseAudioBlob);
+      setAudioUrl(url);
+      setStatus("ready");
     } catch (error) {
       console.error("Failed to process recording:", error);
       setStatus("idle");
@@ -89,8 +90,20 @@ export default function Voice({ article }: Props) {
       startRecording();
     } else if (status === "recording") {
       stopRecording();
+    } else if (status === "ready" && audioUrl) {
+      const audio = new Audio(audioUrl);
+      audioRef.current = audio;
+      audio.addEventListener("ended", () => {
+        setStatus("idle");
+        URL.revokeObjectURL(audioUrl);
+        setAudioUrl(null);
+      });
+      audio
+        .play()
+        .then(() => setStatus("dictating"))
+        .catch(console.error);
     }
-  }, [status, startRecording, stopRecording]);
+  }, [status, startRecording, stopRecording, audioUrl]);
 
   useEffect(() => {
     if (status !== "recording" && streamRef.current) {
@@ -104,22 +117,37 @@ export default function Voice({ article }: Props) {
       if (streamRef.current) {
         streamRef.current.getTracks().forEach((track) => track.stop());
       }
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+      if (audioUrl) {
+        URL.revokeObjectURL(audioUrl);
+      }
     };
-  }, []);
+  }, [audioUrl]);
 
   return (
     <div className="flex flex-col items-center gap-8">
       <button
-        className={cn("size-24 rounded-full transition-colors", {
-          "bg-secondary": status === "idle",
-          "bg-primary": status === "recording",
-          "bg-primary animate-pulse": status === "loading",
-          "bg-blue-500": status === "dictating",
-          "cursor-not-allowed": status === "loading" || status === "dictating",
-        })}
+        className={cn(
+          "flex items-center justify-center size-16 text-white rounded-full transition-colors",
+          {
+            "bg-primary": status === "idle" || status === "loading",
+            "bg-red-500 animate-pulse": status === "recording",
+            "bg-green-500": status === "ready",
+            "bg-blue-500": status === "dictating",
+            "cursor-not-allowed": status === "loading",
+          }
+        )}
         onClick={handleButtonClick}
-        disabled={status === "loading" || status === "dictating"}
-      />
+        disabled={status === "loading"}
+      >
+        {status === "idle" && <RadiobuttonIcon className="size-8" />}
+        {status === "loading" && <UpdateIcon className="size-8 animate-spin" />}
+        {status === "ready" && <PlayIcon className="size-8" />}
+        {status === "dictating" && <SpeakerLoudIcon className="size-8" />}
+      </button>
     </div>
   );
 }
