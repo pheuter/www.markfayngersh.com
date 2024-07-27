@@ -7,6 +7,7 @@ import {
   RadiobuttonIcon,
   SpeakerLoudIcon,
   UpdateIcon,
+  StopIcon,
 } from "@radix-ui/react-icons";
 
 type Status = "idle" | "recording" | "loading" | "ready" | "dictating";
@@ -85,12 +86,8 @@ export default function Voice({ article }: Props) {
     }
   };
 
-  const handleButtonClick = useCallback(() => {
-    if (status === "idle") {
-      startRecording();
-    } else if (status === "recording") {
-      stopRecording();
-    } else if (status === "ready" && audioUrl) {
+  const playAudio = useCallback(() => {
+    if (audioUrl) {
       const audio = new Audio(audioUrl);
       audioRef.current = audio;
       audio.addEventListener("ended", () => {
@@ -103,7 +100,33 @@ export default function Voice({ article }: Props) {
         .then(() => setStatus("dictating"))
         .catch(console.error);
     }
-  }, [status, startRecording, stopRecording, audioUrl]);
+  }, [audioUrl]);
+
+  const stopAudio = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setStatus("idle");
+    }
+  }, []);
+
+  const handleButtonClick = useCallback(() => {
+    switch (status) {
+      case "idle":
+        startRecording();
+        break;
+      case "recording":
+        stopRecording();
+        break;
+      case "ready":
+        playAudio();
+        break;
+      case "dictating":
+        stopAudio();
+        break;
+      // Do nothing for "loading" state
+    }
+  }, [status, startRecording, stopRecording, playAudio, stopAudio]);
 
   useEffect(() => {
     if (status !== "recording" && streamRef.current) {
@@ -133,7 +156,8 @@ export default function Voice({ article }: Props) {
         className={cn(
           "flex items-center justify-center size-16 text-white rounded-full transition-colors",
           {
-            "bg-primary": status === "idle" || status === "loading",
+            "bg-foreground text-background":
+              status === "idle" || status === "loading",
             "bg-red-500 animate-pulse": status === "recording",
             "bg-green-500": status === "ready",
             "bg-blue-500": status === "dictating",
@@ -146,6 +170,7 @@ export default function Voice({ article }: Props) {
         {status === "idle" && <RadiobuttonIcon className="size-8" />}
         {status === "loading" && <UpdateIcon className="size-8 animate-spin" />}
         {status === "ready" && <PlayIcon className="size-8" />}
+        {status === "recording" && <StopIcon className="size-8" />}
         {status === "dictating" && <SpeakerLoudIcon className="size-8" />}
       </button>
     </div>
