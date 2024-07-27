@@ -4,6 +4,10 @@ import { generateText } from "ai";
 
 const openai = new OpenAI();
 
+export const config = {
+  maxDuration: 30,
+};
+
 export async function POST(req: Request) {
   const formData = await req.formData();
   const article = formData.get("article") as string;
