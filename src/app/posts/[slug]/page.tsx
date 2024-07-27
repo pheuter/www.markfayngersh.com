@@ -3,6 +3,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks";
 import { allPosts } from "contentlayer/generated";
 
 import Link from "next/link";
+import Voice from "@/components/Voice";
 import { HomeIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 
@@ -48,6 +49,9 @@ export default async function PostLayout({
           <MDXContent />
         </div>
       </article>
+      <div className="fixed bottom-8 right-8 rounded-full">
+        <Voice article={post.body.raw} />
+      </div>
     </>
   );
 }
