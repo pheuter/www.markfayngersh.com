@@ -16,44 +16,24 @@ export default function Voice({ article }: Props) {
   const audioChunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
 
-  const getSupportedMimeType = () => {
-    const types = ["audio/webm", "audio/mp4", "audio/mpeg", "audio/ogg"];
-    for (const type of types) {
-      if (MediaRecorder.isTypeSupported(type)) {
-        return type;
-      }
-    }
-    return "audio/webm"; // Fallback, though it might not work in Safari
-  };
-
-  const getFileExtension = (mimeType: string) => {
-    const extensions: { [key: string]: string } = {
-      "audio/webm": "webm",
-      "audio/mp4": "mp4",
-      "audio/mpeg": "mp3",
-      "audio/ogg": "ogg",
-    };
-    return extensions[mimeType] || "webm";
-  };
-
   const startRecording = useCallback(async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       streamRef.current = stream;
-      const options = { mimeType: getSupportedMimeType() };
-      const mediaRecorder = new MediaRecorder(stream, options);
+      const mediaRecorder = new MediaRecorder(stream);
       mediaRecorderRef.current = mediaRecorder;
 
-      mediaRecorder.ondataavailable = (event) => {
+      mediaRecorder.addEventListener("dataavailable", (event) => {
         audioChunksRef.current.push(event.data);
-      };
+      });
 
-      mediaRecorder.onstop = async () => {
-        const mimeType = getSupportedMimeType();
-        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
+      mediaRecorder.addEventListener("stop", async () => {
+        const audioBlob = new Blob(audioChunksRef.current, {
+          type: "audio/mpeg",
+        });
         audioChunksRef.current = [];
-        await processRecording(audioBlob, mimeType);
-      };
+        await processRecording(audioBlob);
+      });
 
       mediaRecorder.start();
       setStatus("recording");
@@ -72,11 +52,11 @@ export default function Voice({ article }: Props) {
     }
   }, []);
 
-  const processRecording = async (audioBlob: Blob, mimeType: string) => {
+  const processRecording = async (audioBlob: Blob) => {
     try {
       const formData = new FormData();
       formData.append("article", article);
-      formData.append("file", audioBlob, `audio.${getFileExtension(mimeType)}`);
+      formData.append("file", audioBlob, "audio.mp3");
 
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -91,10 +71,10 @@ export default function Voice({ article }: Props) {
       const audioUrl = URL.createObjectURL(responseAudioBlob);
       const audio = new Audio(audioUrl);
 
-      audio.onended = () => {
+      audio.addEventListener("ended", () => {
         setStatus("idle");
         URL.revokeObjectURL(audioUrl);
-      };
+      });
 
       setStatus("dictating");
       await audio.play();
