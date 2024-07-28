@@ -11,8 +11,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export const runtime = "edge";
-
 export const metadata: Metadata = {
   title: "Mark Fayngersh",
   description: "The personal website of Mark Fayngersh",
