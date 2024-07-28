@@ -4,7 +4,6 @@ import { generateText } from "ai";
 
 const openai = new OpenAI();
 
-export const runtime = "edge";
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
