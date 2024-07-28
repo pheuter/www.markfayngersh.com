@@ -158,9 +158,8 @@ export default function Voice({ article }: Props) {
           {
             "bg-foreground text-background":
               status === "idle" || status === "loading",
-            "bg-red-500 animate-pulse": status === "recording",
-            "bg-green-500": status === "ready",
-            "bg-blue-500": status === "dictating",
+            "bg-red-500": status === "recording",
+            "bg-blue-500": status === "ready" || status === "dictating",
             "cursor-not-allowed": status === "loading",
           }
         )}
@@ -168,9 +167,9 @@ export default function Voice({ article }: Props) {
         disabled={status === "loading"}
       >
         {status === "idle" && <RadiobuttonIcon className="size-8" />}
+        {status === "recording" && <StopIcon className="size-8" />}
         {status === "loading" && <UpdateIcon className="size-8 animate-spin" />}
         {status === "ready" && <PlayIcon className="size-8" />}
-        {status === "recording" && <StopIcon className="size-8" />}
         {status === "dictating" && <SpeakerLoudIcon className="size-8" />}
       </button>
     </div>
