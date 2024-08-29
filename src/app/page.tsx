@@ -27,6 +27,10 @@ export default function Home() {
               Blog
             </Link>
             <span className="text-muted-foreground">•</span>
+            <Link href="/bookshelf" className="hover:underline">
+              Bookshelf
+            </Link>
+            <span className="text-muted-foreground">•</span>
             <Link href="/api/resume" className="hover:underline">
               Resume
             </Link>
