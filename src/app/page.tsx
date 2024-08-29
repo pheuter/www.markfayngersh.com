@@ -22,8 +22,14 @@ export default function Home() {
             interactions and collective experiences for large, distributed
             audiences at the MIT Media Lab.
           </p>
-          <p>
-            <Link href="/posts">Blog</Link>
+          <p className="flex items-center justify-center md:justify-start space-x-2">
+            <Link href="/posts" className="hover:underline">
+              Blog
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link href="/api/resume" className="hover:underline">
+              Resume
+            </Link>
           </p>
         </div>
       </div>
