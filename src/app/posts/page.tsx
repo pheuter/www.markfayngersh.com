@@ -38,8 +38,8 @@ export default function Home() {
           <HomeIcon className="size-4" />
         </Link>
       </Button>
-      <div className="mx-auto max-w-xl py-8 px-4">
-        <h1 className="scroll-m-20 text-center mb-8 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <div className="mx-auto max-w-xl px-4 py-8">
+        <h1 className="mb-8 scroll-m-20 text-center text-4xl font-extrabold tracking-tight lg:text-5xl">
           Mark&apos;s Blog
         </h1>
 

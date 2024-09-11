@@ -1,10 +1,10 @@
 {
-	"svelte.enable-ts-plugin": true,
-	"typescript.tsdk": "./node_modules/typescript/lib",
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"[svelte]": {
-		"editor.defaultFormatter": "svelte.svelte-vscode"
-	}
+  "svelte.enable-ts-plugin": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
 }

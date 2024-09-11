@@ -163,7 +163,7 @@ export default function Voice({ article }: Props) {
           <div className="flex flex-col items-center gap-8">
             <button
               className={cn(
-                "flex items-center justify-center size-16 text-white rounded-full transition-colors",
+                "flex size-16 items-center justify-center rounded-full text-white transition-colors",
                 {
                   "bg-foreground text-background":
                     status === "idle" || status === "loading",
@@ -175,7 +175,9 @@ export default function Voice({ article }: Props) {
               onClick={handleButtonClick}
               disabled={status === "loading"}
             >
-              {status === "idle" && <RadiobuttonIcon className="size-8" />}
+              {status === "idle" && (
+                <RadiobuttonIcon className="block size-8" />
+              )}
               {status === "recording" && <StopIcon className="size-8" />}
               {status === "loading" && (
                 <UpdateIcon className="size-8 animate-spin" />

@@ -246,7 +246,7 @@ export default function Books() {
         </Link>
       </Button>
       <div className="container py-16 md:py-32">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {books.map((book, index) => (
             <Link
               key={index}
@@ -254,17 +254,17 @@ export default function Books() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Card className="flex flex-col h-full hover:shadow-md transition-shadow">
-                <CardContent className="p-3 flex-grow flex flex-col">
+              <Card className="flex h-full flex-col transition-shadow hover:shadow-md">
+                <CardContent className="flex flex-grow flex-col p-3">
                   <img
                     src={book.coverImage}
                     alt={`Cover of ${book.title}`}
-                    className="w-32 h-48 object-cover rounded-sm mx-auto mb-2"
+                    className="mx-auto mb-2 h-48 w-32 rounded-sm object-cover"
                   />
-                  <h2 className="text-sm font-semibold text-center line-clamp-2">
+                  <h2 className="line-clamp-2 text-center text-sm font-semibold">
                     {book.title}
                   </h2>
-                  <p className="text-xs text-muted-foreground text-center mt-1">
+                  <p className="mt-1 text-center text-xs text-muted-foreground">
                     {book.author}
                   </p>
                 </CardContent>

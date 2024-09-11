@@ -37,7 +37,7 @@ export default async function PostLayout({
         <div className="mb-8 text-center">
           <time
             dateTime={post.date}
-            className="block mb-1 text-xs text-muted-foreground"
+            className="mb-1 block text-xs text-muted-foreground"
           >
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
@@ -45,7 +45,7 @@ export default async function PostLayout({
             {post.title}
           </h2>
         </div>
-        <div className="px-4 prose prose-lg sm:px-0 dark:prose-invert">
+        <div className="prose prose-lg px-4 dark:prose-invert sm:px-0">
           <MDXContent />
         </div>
       </article>
