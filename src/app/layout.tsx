@@ -14,6 +14,10 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Mark Fayngersh",
   description: "The personal website of Mark Fayngersh",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

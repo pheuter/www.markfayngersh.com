@@ -17,10 +17,9 @@ export default function Home() {
           <h1>Mark Fayngersh</h1>
           <p>
             <strong>Mark</strong> is the cofounder of Careswitch, an AI-powered
-            home care startup. Previously, he worked on a modern collaborative
-            care platform at Quartet Health, and researched meaningful
-            interactions and collective experiences for large, distributed
-            audiences at the MIT Media Lab.
+            home care startup. He previously worked on a collaborative care
+            platform at Quartet Health and researched interactions for large,
+            distributed audiences at the MIT Media Lab.
           </p>
           <p className="flex items-center justify-center space-x-2 md:justify-start">
             <Link href="/posts" className="hover:underline">
