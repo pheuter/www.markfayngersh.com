@@ -62,7 +62,7 @@ export default async function PostLayout({
                 {allPosts
                   .filter((p) => p._raw.flattenedPath !== params.slug)
                   .map((post) => (
-                    <DropdownMenuItem key={post._raw.flattenedPath}>
+                    <DropdownMenuItem asChild key={post._raw.flattenedPath}>
                       <Link href={post._raw.flattenedPath}>{post.title}</Link>
                     </DropdownMenuItem>
                   ))}
