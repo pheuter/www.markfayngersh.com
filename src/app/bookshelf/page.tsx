@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { HomeIcon } from "@radix-ui/react-icons";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { SlashIcon } from "@radix-ui/react-icons";
 
 interface Book {
   title: string;
@@ -240,11 +247,21 @@ const books = [
 export default function Books() {
   return (
     <>
-      <Button asChild size="icon" variant="ghost" className="absolute inset-2">
-        <Link href="/">
-          <HomeIcon className="size-4" />
-        </Link>
-      </Button>
+      <Breadcrumb className="px-4 py-2">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">Home</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>Bookshelf</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <div className="container py-16 md:py-32">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {books.map((book, index) => (

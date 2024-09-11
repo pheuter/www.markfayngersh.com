@@ -4,8 +4,22 @@ import { allPosts } from "contentlayer/generated";
 
 import Link from "next/link";
 import Voice from "@/components/Voice";
-import { HomeIcon } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
+import { ChevronDownIcon, SlashIcon } from "@radix-ui/react-icons";
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -28,11 +42,41 @@ export default async function PostLayout({
 
   return (
     <>
-      <Button asChild size="icon" variant="ghost" className="absolute inset-2">
-        <Link href="/">
-          <HomeIcon className="size-4" />
-        </Link>
-      </Button>
+      <Breadcrumb className="px-4 py-2">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">Home</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1">
+                Blog
+                <ChevronDownIcon />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {allPosts
+                  .filter((p) => p._raw.flattenedPath !== params.slug)
+                  .map((post) => (
+                    <DropdownMenuItem key={post._raw.flattenedPath}>
+                      <Link href={post._raw.flattenedPath}>{post.title}</Link>
+                    </DropdownMenuItem>
+                  ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>{post.title}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <article className="mx-auto max-w-prose py-8">
         <div className="mb-8 text-center">
           <time

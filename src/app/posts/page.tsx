@@ -2,8 +2,15 @@ import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 
-import { HomeIcon } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { SlashIcon } from "@radix-ui/react-icons";
 
 function PostCard(post: Post) {
   return (
@@ -33,16 +40,22 @@ export default function Home() {
 
   return (
     <>
-      <Button asChild size="icon" variant="ghost" className="absolute inset-2">
-        <Link href="/">
-          <HomeIcon className="size-4" />
-        </Link>
-      </Button>
+      <Breadcrumb className="px-4 py-2">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">Home</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator>
+            <SlashIcon />
+          </BreadcrumbSeparator>
+          <BreadcrumbItem>
+            <BreadcrumbPage>Blog</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
       <div className="mx-auto max-w-xl px-4 py-8">
-        <h1 className="mb-8 scroll-m-20 text-center text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Mark&apos;s Blog
-        </h1>
-
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}
