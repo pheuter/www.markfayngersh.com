@@ -19,6 +19,13 @@ interface Book {
 
 const books = [
   {
+    title: "Nexus",
+    author: "Yuval Noah Harari",
+    coverImage:
+      "https://books.google.com/books/publisher/content?id=n4rvEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3IBJKnF_r8qJpBVRkVmAtcIh9yjg&w=1280",
+    url: "https://www.google.com/books/edition/Nexus/n4rvEAAAQBAJ?hl=en&gbpv=0",
+  },
+  {
     title: "Indigenous Continent",
     author: "Pekka Hämäläinen",
     coverImage:
@@ -171,6 +178,13 @@ const books = [
     coverImage:
       "https://books.google.com/books/content?id=gLZMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
     url: "https://play.google.com/store/books/details?id=gLZMDwAAQBAJ&source=gbs_api",
+  },
+  {
+    title: "When Breath Becomes Air",
+    author: "Paul Kalanithi",
+    coverImage:
+      "https://books.google.com/books/publisher/content?id=93faCwAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0MfwurwmsvjBOdvfo21vb71XZeSw&w=1280",
+    url: "https://www.google.com/books/edition/When_Breath_Becomes_Air/93faCwAAQBAJ?hl=en&gbpv=0",
   },
   {
     title: "The Courage to be Disliked",
