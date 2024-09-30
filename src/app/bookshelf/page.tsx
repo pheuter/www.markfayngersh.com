@@ -19,10 +19,17 @@ interface Book {
 
 const books = [
   {
+    title: "The Savior Generals",
+    author: "Victor Davis Hanson",
+    coverImage:
+      "https://books.google.com/books/content?id=h0lxAwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    url: "https://www.google.com/books/edition/The_Savior_Generals/h0lxAwAAQBAJ?hl=en&gbpv=0",
+  },
+  {
     title: "Nexus",
     author: "Yuval Noah Harari",
     coverImage:
-      "https://books.google.com/books/publisher/content?id=n4rvEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3IBJKnF_r8qJpBVRkVmAtcIh9yjg&w=1280",
+      "https://books.google.com/books/content?id=n4rvEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     url: "https://www.google.com/books/edition/Nexus/n4rvEAAAQBAJ?hl=en&gbpv=0",
   },
   {

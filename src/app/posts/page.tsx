@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
+import { tz } from "@date-fns/tz";
 import { allPosts, Post } from "contentlayer/generated";
 
 import {
@@ -27,7 +28,7 @@ function PostCard(post: Post) {
         dateTime={post.date}
         className="mb-2 block text-xs text-muted-foreground"
       >
-        {format(parseISO(post.date), "LLLL d, yyyy")}
+        {format(parseISO(post.date, { in: tz("utc") }), "LLLL d, yyyy")}
       </time>
     </div>
   );

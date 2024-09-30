@@ -1,4 +1,5 @@
 import { format, parseISO } from "date-fns";
+import { tz } from "@date-fns/tz";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import { allPosts } from "contentlayer/generated";
 
@@ -83,7 +84,7 @@ export default async function PostLayout({
             dateTime={post.date}
             className="mb-1 block text-xs text-muted-foreground"
           >
-            {format(parseISO(post.date), "LLLL d, yyyy")}
+            {format(parseISO(post.date, { in: tz("utc") }), "LLLL d, yyyy")}
           </time>
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
             {post.title}
