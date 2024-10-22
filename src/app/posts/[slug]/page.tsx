@@ -1,6 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { tz } from "@date-fns/tz";
-import { useMDXComponent } from "next-contentlayer2/hooks";
+import { getMDXComponent } from "next-contentlayer2/hooks";
 import { allPosts } from "contentlayer/generated";
 
 import Link from "next/link";
@@ -25,21 +25,23 @@ import {
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = async (props: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const params = await props.params;
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
   return { title: post.title };
 };
 
-export default async function PostLayout({
-  params,
-}: {
-  params: { slug: string };
+export default async function PostLayout(props: {
+  params: Promise<{ slug: string }>;
 }) {
+  const params = await props.params;
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
-  const MDXContent = useMDXComponent(post.body.code);
+  const MDXContent = getMDXComponent(post.body.code);
 
   return (
     <>

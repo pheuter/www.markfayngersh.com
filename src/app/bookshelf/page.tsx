@@ -19,6 +19,13 @@ interface Book {
 
 const books = [
   {
+    title: "The Beach",
+    author: "Alex Garland",
+    coverImage:
+      "https://books.google.com/books/content?id=Gq1PEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    url: "https://www.google.com/books/edition/The_Beach/Gq1PEAAAQBAJ?hl=en&gbpv=0",
+  },
+  {
     title: "The Savior Generals",
     author: "Victor Davis Hanson",
     coverImage:
