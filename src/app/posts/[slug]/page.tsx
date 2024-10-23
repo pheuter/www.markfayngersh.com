@@ -1,6 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { tz } from "@date-fns/tz";
-import { getMDXComponent } from "next-contentlayer2/hooks";
+import MDXContent from "@/components/MDXContent";
 import { allPosts } from "contentlayer/generated";
 
 import Link from "next/link";
@@ -40,8 +40,6 @@ export default async function PostLayout(props: {
   const params = await props.params;
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-
-  const MDXContent = getMDXComponent(post.body.code);
 
   return (
     <>
@@ -93,7 +91,7 @@ export default async function PostLayout(props: {
           </h2>
         </div>
         <div className="prose prose-lg px-4 dark:prose-invert sm:px-0">
-          <MDXContent />
+          <MDXContent code={post.body.code} />
         </div>
       </article>
       <div className="fixed bottom-8 right-8 rounded-full">
