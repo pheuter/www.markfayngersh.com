@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import {
   PlayIcon,
@@ -15,6 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { getVoiceSystemPrompt } from "@/lib/voiceSystemPrompt";
 
 type Status = "idle" | "recording" | "loading" | "ready" | "dictating";
 
@@ -24,185 +25,134 @@ interface Props {
 
 export default function Voice({ article }: Props) {
   const [status, setStatus] = useState<Status>("idle");
-  const [audioUrl, setAudioUrl] = useState<string | null>(null);
-  const [conversation, setConversation] = useState<
-    { role: "system" | "user" | "assistant"; content: string }[]
-  >([
-    {
-      role: "system",
-      content: `You are an AI voice companion designed to have stimulating and interesting conversations about articles. Your goal is to engage the user in a thought-provoking discussion about the content of the article, encouraging critical thinking and exploration of ideas.
-
-Here is the article you will be discussing:
-
-<article>
-${article}
-</article>
-
-When interacting with the user, follow these guidelines:
-
-1. Listen carefully to the user's input and respond thoughtfully, making connections to the article's content.
-
-2. Use a friendly, conversational tone while maintaining a level of intellectual discourse appropriate for the topic.
-
-3. Encourage the user to think critically about the article by asking follow-up questions, presenting alternative viewpoints, or highlighting interesting aspects of the topic.
-
-4. Draw connections between the article's content and real-world applications or implications when relevant.
-
-5. If the user expresses an opinion, acknowledge it and provide additional information or a different perspective from the article to enrich the discussion.
-
-6. Keep your responses concise (2-4 sentences) to maintain a natural flow of conversation.
-
-7. If the user asks a question not directly related to the article, gently guide the conversation back to the article's content.
-
-8. Be prepared to explain or elaborate on any concepts mentioned in the article if the user requests clarification.
-
-Remember, your goal is to have a stimulating and interesting conversation about the article. Adapt your responses based on the user's level of engagement and interest in the topic.`,
-    },
+  const [conversation, setConversation] = useState([
+    { role: "system" as const, content: getVoiceSystemPrompt(article) },
   ]);
-
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const audioChunksRef = useRef<Blob[]>([]);
-  const streamRef = useRef<MediaStream | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const processRecording = useCallback(
-    async (audioBlob: Blob) => {
-      try {
-        const formData = new FormData();
-        formData.append("conversation", JSON.stringify(conversation));
-        formData.append("file", audioBlob, "audio.mp3");
-
-        const response = await fetch("/api/chat", {
-          method: "POST",
-          body: formData,
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const { audio, assistantMessage, userMessage } = await response.json();
-
-        setConversation((prev) => [
-          ...prev,
-          { role: "user", content: userMessage },
-          { role: "assistant", content: assistantMessage },
-        ]);
-
-        const audioBlobResponse = new Blob(
-          [Uint8Array.from(atob(audio), (c) => c.charCodeAt(0))],
-          { type: "audio/mpeg" }
-        );
-        const url = URL.createObjectURL(audioBlobResponse);
-        setAudioUrl(url);
-        setStatus("ready");
-      } catch (error) {
-        console.error("Failed to process recording:", error);
-        setStatus("idle");
-      }
-    },
-    [conversation]
-  );
-
-  const startRecording = useCallback(async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-      const mediaRecorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = mediaRecorder;
-
-      mediaRecorder.addEventListener("dataavailable", (event) => {
-        audioChunksRef.current.push(event.data);
-      });
-
-      mediaRecorder.addEventListener("stop", async () => {
-        const audioBlob = new Blob(audioChunksRef.current, {
-          type: "audio/mpeg",
-        });
-        audioChunksRef.current = [];
-        await processRecording(audioBlob);
-      });
-
-      mediaRecorder.start();
-      setStatus("recording");
-    } catch (error) {
-      console.error("Failed to start recording:", error);
-    }
-  }, [processRecording]);
-
-  const stopRecording = useCallback(() => {
-    if (
-      mediaRecorderRef.current &&
-      mediaRecorderRef.current.state === "recording"
-    ) {
-      mediaRecorderRef.current.stop();
-      setStatus("loading");
-    }
-  }, []);
-
-  const playAudio = useCallback(() => {
-    if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audioRef.current = audio;
-      audio.addEventListener("ended", () => {
-        setStatus("idle");
-        URL.revokeObjectURL(audioUrl);
-        setAudioUrl(null);
-      });
-      audio
-        .play()
-        .then(() => setStatus("dictating"))
-        .catch(console.error);
-    }
-  }, [audioUrl]);
-
-  const stopAudio = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setStatus("idle");
-    }
-  }, []);
-
-  const handleButtonClick = useCallback(() => {
-    switch (status) {
-      case "idle":
-        startRecording();
-        break;
-      case "recording":
-        stopRecording();
-        break;
-      case "ready":
-        playAudio();
-        break;
-      case "dictating":
-        stopAudio();
-        break;
-      // Do nothing for "loading" state
-    }
-  }, [status, startRecording, stopRecording, playAudio, stopAudio]);
-
-  useEffect(() => {
-    if (status !== "recording" && streamRef.current) {
-      streamRef.current.getTracks().forEach((track) => track.stop());
-      streamRef.current = null;
-    }
-  }, [status]);
+  
+  const recorder = useRef<{
+    mediaRecorder: MediaRecorder | null;
+    stream: MediaStream | null;
+    chunks: Blob[];
+  }>({ mediaRecorder: null, stream: null, chunks: [] });
+  
+  const audio = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     return () => {
-      if (streamRef.current) {
-        streamRef.current.getTracks().forEach((track) => track.stop());
+      if (recorder.current.stream) {
+        recorder.current.stream.getTracks().forEach(track => track.stop());
       }
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-      if (audioUrl) {
-        URL.revokeObjectURL(audioUrl);
+      if (audio.current) {
+        audio.current.pause();
+        URL.revokeObjectURL(audio.current.src);
       }
     };
-  }, [audioUrl]);
+  }, []);
+
+  async function handleButtonClick() {
+    switch (status) {
+      case "idle":
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          recorder.current.stream = stream;
+          recorder.current.mediaRecorder = new MediaRecorder(stream);
+          recorder.current.chunks = [];
+
+          recorder.current.mediaRecorder.ondataavailable = (e) => {
+            recorder.current.chunks.push(e.data);
+          };
+
+          recorder.current.mediaRecorder.onstop = async () => {
+            const audioBlob = new Blob(recorder.current.chunks, { type: "audio/mpeg" });
+            await processRecording(audioBlob);
+          };
+
+          recorder.current.mediaRecorder.start();
+          setStatus("recording");
+        } catch (error) {
+          console.error("Failed to start recording:", error);
+        }
+        break;
+
+      case "recording":
+        if (recorder.current.mediaRecorder?.state === "recording") {
+          recorder.current.mediaRecorder.stop();
+          recorder.current.stream?.getTracks().forEach(track => track.stop());
+          setStatus("loading");
+        }
+        break;
+
+      case "ready":
+        if (audio.current) {
+          audio.current.play()
+            .then(() => setStatus("dictating"))
+            .catch(console.error);
+        }
+        break;
+
+      case "dictating":
+        if (audio.current) {
+          audio.current.pause();
+          audio.current.currentTime = 0;
+          setStatus("idle");
+        }
+        break;
+    }
+  }
+
+  async function processRecording(audioBlob: Blob) {
+    try {
+      const formData = new FormData();
+      formData.append("conversation", JSON.stringify(conversation));
+      formData.append("file", audioBlob, "audio.mp3");
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+      const { audio: audioBase64, assistantMessage, userMessage } = await response.json();
+
+      setConversation(prev => [
+        ...prev,
+        { role: "user" as const, content: userMessage },
+        { role: "assistant" as const, content: assistantMessage },
+      ]);
+
+      const audioData = Uint8Array.from(atob(audioBase64), c => c.charCodeAt(0));
+      const audioBlobResponse = new Blob([audioData], { type: "audio/mpeg" });
+      
+      if (audio.current) {
+        URL.revokeObjectURL(audio.current.src);
+      }
+      
+      audio.current = new Audio(URL.createObjectURL(audioBlobResponse));
+      audio.current.onended = () => {
+        setStatus("idle");
+        if (audio.current) {
+          URL.revokeObjectURL(audio.current.src);
+          audio.current = null;
+        }
+      };
+      
+      setStatus("ready");
+    } catch (error) {
+      console.error("Failed to process recording:", error);
+      setStatus("idle");
+    }
+  }
+
+  const buttonStyle = cn(
+    "flex size-16 items-center justify-center rounded-full text-white transition-colors",
+    {
+      "bg-foreground text-background": status === "idle" || status === "loading",
+      "bg-red-500": status === "recording",
+      "bg-blue-500": status === "ready" || status === "dictating",
+      "cursor-not-allowed": status === "loading",
+    }
+  );
 
   return (
     <TooltipProvider delayDuration={100}>
@@ -210,26 +160,13 @@ Remember, your goal is to have a stimulating and interesting conversation about 
         <TooltipTrigger asChild>
           <div className="flex flex-col items-center gap-8">
             <button
-              className={cn(
-                "flex size-16 items-center justify-center rounded-full text-white transition-colors",
-                {
-                  "bg-foreground text-background":
-                    status === "idle" || status === "loading",
-                  "bg-red-500": status === "recording",
-                  "bg-blue-500": status === "ready" || status === "dictating",
-                  "cursor-not-allowed": status === "loading",
-                }
-              )}
+              className={buttonStyle}
               onClick={handleButtonClick}
               disabled={status === "loading"}
             >
-              {status === "idle" && (
-                <RadiobuttonIcon className="block size-8" />
-              )}
+              {status === "idle" && <RadiobuttonIcon className="block size-8" />}
               {status === "recording" && <StopIcon className="size-8" />}
-              {status === "loading" && (
-                <UpdateIcon className="size-8 animate-spin" />
-              )}
+              {status === "loading" && <UpdateIcon className="size-8 animate-spin" />}
               {status === "ready" && <PlayIcon className="size-8" />}
               {status === "dictating" && <SpeakerLoudIcon className="size-8" />}
             </button>
