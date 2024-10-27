@@ -1,31 +1,27 @@
-export const load = async () => {
-	interface Post {
+interface PostMetadata {
+	metadata: {
 		title: string;
-		date: Date;
-		slug: string;
-	}
+		date: string;
+	};
+}
 
-	const posts = import.meta.glob<{
-		metadata: {
-			title: string;
-			date: string;
-		};
-	}>('./**/*.svx');
+export const load = async () => {
+	const posts = import.meta.glob<PostMetadata>('./**/*.svx');
 
-	const allPosts: Post[] = [];
+	const allPosts = await Promise.all(
+		Object.entries(posts).map(async ([path, importFn]) => {
+			const component = await importFn();
+			const slug = path.match(/\.\/(.+)\/\+page\.svx/)?.[1] ?? '';
 
-	for (const [path, importFn] of Object.entries(posts)) {
-		const component = await importFn();
-		const slug = path.match(/\.\/(.+)\/\+page\.svx/)?.[1] || '';
+			return {
+				title: component.metadata.title,
+				date: new Date(component.metadata.date),
+				slug
+			};
+		})
+	);
 
-		allPosts.push({
-			title: component.metadata.title,
-			date: new Date(component.metadata.date),
-			slug
-		});
-	}
-
-	allPosts.sort((a, b) => b.date.getTime() - a.date.getTime());
-
-	return { posts: allPosts };
+	return {
+		posts: allPosts.sort((a, b) => b.date.getTime() - a.date.getTime())
+	};
 };

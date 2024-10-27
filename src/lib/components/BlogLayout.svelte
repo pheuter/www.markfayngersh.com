@@ -9,6 +9,12 @@
 	}
 
 	let { title, date, children }: Props = $props();
+
+	const formatDate = (date: string) =>
+		new Date(date).toLocaleDateString('en-US', {
+			timeZone: 'UTC',
+			dateStyle: 'medium'
+		});
 </script>
 
 <svelte:head>
@@ -21,12 +27,16 @@
 			items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/posts' }, { label: title }]}
 		/>
 	</nav>
+
 	<article class="prose prose-lg prose-zinc mx-auto dark:prose-invert prose-headings:font-semibold">
-		<h1 class="mb-2">{title}</h1>
-		<time datetime={date} class="text-sm">
-			{new Date(date).toLocaleDateString('en-US', { timeZone: 'UTC', dateStyle: 'medium' })}
-		</time>
-		<hr class="my-4" />
+		<header>
+			<h1 class="mb-2">{title}</h1>
+			<time datetime={new Date(date).toISOString()} class="text-sm">
+				{formatDate(date)}
+			</time>
+			<hr class="my-4" />
+		</header>
+
 		{@render children()}
 	</article>
 </div>
