@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 
 	let { data } = $props();
 
-	const formatDate = (date: Date) =>
+	const formatDate = (date) =>
 		date.toLocaleDateString('en-US', {
 			timeZone: 'UTC',
 			dateStyle: 'medium'

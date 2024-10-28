@@ -1,12 +1,5 @@
-<script lang="ts">
+<script>
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
-
-	interface Book {
-		title: string;
-		author: string;
-		coverImage: string;
-		url: string;
-	}
 
 	const books = [
 		{
@@ -261,7 +254,7 @@
 				'https://books.google.com/books/content?id=8Be1Px0Nc5EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
 			url: 'https://books.google.com/books?id=8Be1Px0Nc5EC&dq=intitle:Heart%2Bof%2Ba%2BDog+inauthor:Mikhail%2BBulgakov&hl=&source=gbs_api'
 		}
-	] satisfies Book[];
+	];
 </script>
 
 <div class="mx-auto max-w-5xl px-4 py-8">

@@ -1,16 +1,9 @@
-<script lang="ts">
+<script>
 	import Breadcrumbs from './Breadcrumbs.svelte';
-	import type { Snippet } from 'svelte';
 
-	interface Props {
-		title: string;
-		date: string;
-		children: Snippet;
-	}
+	let { title, date, children } = $props();
 
-	let { title, date, children }: Props = $props();
-
-	const formatDate = (date: string) =>
+	const formatDate = (date) =>
 		new Date(date).toLocaleDateString('en-US', {
 			timeZone: 'UTC',
 			dateStyle: 'medium'

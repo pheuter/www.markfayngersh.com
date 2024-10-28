@@ -1,9 +1,9 @@
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-import type { Config } from 'tailwindcss';
 
+/** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte}'],
 	theme: { extend: {} },
 	plugins: [typography, forms]
-} as Config;
+};

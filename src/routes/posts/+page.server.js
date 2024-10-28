@@ -1,12 +1,5 @@
-interface PostMetadata {
-	metadata: {
-		title: string;
-		date: string;
-	};
-}
-
 export const load = async () => {
-	const posts = import.meta.glob<PostMetadata>('./**/*.svx');
+	const posts = import.meta.glob('./**/*.svx');
 
 	const allPosts = await Promise.all(
 		Object.entries(posts).map(async ([path, importFn]) => {

@@ -1,1 +1,179 @@
-always use Svelte 5 and TypeScript
+always use Svelte 5.
+
+# Comprehensive Overview of Svelte 5
+
+## Introduction
+
+Svelte 5 introduces a major overhaul to its reactivity system and component architecture while maintaining backwards compatibility with Svelte 4. The new version brings clearer and more explicit reactive declarations through Runes, simplified event handling, and more powerful content composition with Snippets.
+
+## Runes
+
+Runes are special compiler instructions that start with `$` and look like function calls. They are part of Svelte's core syntax and don't need to be imported. The main runes are:
+
+### $state
+
+- Explicitly declares reactive state variables
+- Replaces implicit reactivity of `let` declarations
+- Can create deeply reactive state for objects and arrays
+
+```js
+let count = $state(0);
+let todos = $state([{ done: false, text: 'Learn Svelte 5' }]);
+```
+
+### $derived
+
+- Creates values that automatically update based on state changes
+- Replaces `$:` for computed values
+- Can use `$derived.by()` for complex computations
+
+```js
+let count = $state(0);
+let doubled = $derived(count * 2);
+
+let total = $derived.by(() => {
+	let sum = 0;
+	for (const n of numbers) sum += n;
+	return sum;
+});
+```
+
+### $effect
+
+- Runs code in response to state changes
+- Replaces `$:` for side effects
+- Runs after DOM updates by default
+- `$effect.pre` available for running before DOM updates
+
+```js
+$effect(() => {
+	console.log(`Count is now ${count}`);
+});
+```
+
+### $props
+
+- Declares component properties through destructuring
+- Replaces `export let`
+- Supports renaming, default values, and rest properties
+
+```js
+let { name = 'default', class: className, ...rest } = $props();
+```
+
+### $bindable
+
+- Marks props that can be bound to with `bind:`
+- Makes two-way binding explicit
+
+```js
+let { value = $bindable() } = $props();
+```
+
+## New Event Handler System
+
+Svelte 5 simplifies event handling by treating events as regular properties:
+
+### DOM Events
+
+- Changes `on:click` to `onclick`
+- Uses standard DOM event names
+
+```svelte
+<button onclick={() => count++}>Clicks: {count}</button>
+```
+
+### Component Events
+
+- Replaces `createEventDispatcher` with callback props
+- More idiomatic and type-safe
+
+```js
+// Parent
+<Button onclick={() => console.log('clicked')} />
+
+// Child
+let { onclick } = $props();
+<button {onclick}>Click me</button>
+```
+
+### Event Handler Features
+
+- Support for event handler spreading: `{...props}`
+- Capture phase available with suffix: `onclickcapture`
+- Multiple handlers combined into single function
+- Event modifiers removed in favor of explicit handler code
+
+## Snippets
+
+Snippets replace slots as the primary way to compose component content:
+
+### Basic Usage
+
+```svelte
+{#snippet header()}
+	<h1>Title</h1>
+{/snippet}
+{@render header()}
+```
+
+### Parameterized Snippets
+
+```svelte
+{#snippet item(text, index)}
+	<li>{index}: {text}</li>
+{/snippet}
+{#each items as text, i}
+	{@render item(text, i)}
+{/each}
+```
+
+### Component Usage
+
+```svelte
+<Dialog>
+	{#snippet header()}
+		<h2>Warning</h2>
+	{/snippet}
+	{#snippet content()}
+		<p>Are you sure?</p>
+	{/snippet}
+</Dialog>
+```
+
+### Snippet Features
+
+- Can reference values from outer scope
+- Can be passed as props to components
+- Support TypeScript through `Snippet` type
+- Can be created programmatically with `createRawSnippet`
+
+## Components
+
+Svelte 5 changes how components work:
+
+### Component API Changes
+
+- Removes `$on`, `$set`, and `$destroy` methods
+- Provides `mount`/`hydrate` options for events
+- Uses `unmount()` function for cleanup
+- More functional approach to component lifecycle
+
+## Other Notable Changes
+
+### Breaking Changes
+
+- Stricter HTML structure validation
+- Changes to CSS scoping (uses `:where()`)
+- Modified whitespace handling
+- Reserved `children` prop name
+- Dot notation indicates component reference
+
+### Development Features
+
+- `$inspect` rune for debugging reactivity
+- Improved TypeScript support
+
+## Conclusion
+
+Svelte 5 represents a significant evolution of the framework, with Runes providing clearer reactivity, events becoming more standardized, and Snippets offering powerful content composition. While introducing breaking changes, it maintains backwards compatibility and provides tools for gradual migration.
