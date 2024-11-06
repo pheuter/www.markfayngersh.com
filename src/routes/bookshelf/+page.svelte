@@ -3,6 +3,13 @@
 
 	const books = [
 		{
+			title: 'SPQR',
+			author: 'Mary Beard',
+			coverImage:
+				'https://books.google.com/books/content?id=yKL4CQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+			url: 'https://books.google.com/books?id=yKL4CQAAQBAJ'
+		},
+		{
 			title: 'The Beach',
 			author: 'Alex Garland',
 			coverImage:
