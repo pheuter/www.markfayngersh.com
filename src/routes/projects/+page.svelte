@@ -5,9 +5,9 @@
 		{
 			title: 'HN Push',
 			date: '2024-11-04',
-			tags: ['PWA', 'Svelte'],
+			tags: ['PWA', 'Svelte', 'Redis'],
 			description:
-				'Real-time Hacker News notification system built with SvelteKit that uses Web Push API, Redis for subscription management, and a cron job to monitor trending stories, delivering instant push notifications through a PWA interface.',
+				'Real-time Hacker News notification system built with SvelteKit that uses Web Push API and a cron job to monitor trending stories.',
 			image: {
 				src: '/img/hnpush_screenshot.jpeg',
 				alt: 'HN Push screenshot',
@@ -42,6 +42,20 @@
 				objectPosition: 'top'
 			},
 			url: 'https://www.careswitch.com/caregiver-management#mobile-apps'
+		},
+		{
+			title: 'Careswitch AI Assistant',
+			date: '2023-08-01',
+			tags: ['Svelte', 'GPT-4', 'shadcn/ui'],
+			description:
+				'Global, resizable panel that enables home care agencies to manage their workspace with AI. Features include RAG-powered context awareness, function calling for data visualization, file upload analysis, and dynamic generation of custom charts and graphs based on agency data.',
+			image: {
+				src: '/img/careswitch_assistant_screenshot.png',
+				alt: 'Careswitch AI Assistant screenshot',
+				orientation: 'landscape',
+				objectPosition: 'right'
+			},
+			url: 'https://www.careswitch.com/ai-assistant'
 		}
 	];
 </script>
@@ -54,9 +68,9 @@
 		{#each projects as project}
 			<article class="relative flex flex-col gap-8 lg:flex-row">
 				<div
-					class="relative lg:w-72 {project.image.orientation === 'portrait'
+					class="relative lg:w-[400px] {project.image.orientation === 'portrait'
 						? 'aspect-[4/5]'
-						: 'aspect-[3/2]'} lg:shrink-0"
+						: 'aspect-[16/9]'} lg:shrink-0"
 				>
 					<a
 						href={project.url}
