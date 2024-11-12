@@ -34,7 +34,7 @@
 			date: '2024-03-01',
 			tags: ['iOS', 'SwiftUI'],
 			description:
-				'HIPAA-compliant mobile app for caregivers that streamlines shift management and care documentation. Built with accessibility in mind, featuring adjustable text sizes and high contrast modes, the app enables caregivers to clock in/out and document care tasks even without internet connectivity.',
+				'A user-friendly, HIPAA-compliant mobile app that streamlines shift management and care documentation for caregivers. Designed with accessibility in mind, it features adjustable text sizes and high-contrast modes, allowing caregivers to clock in/out and document care tasks even without internet connectivity.',
 			image: {
 				src: '/img/careswitch_ios_screenshot.jpeg',
 				alt: 'Careswitch iOS App screenshot',
@@ -48,7 +48,7 @@
 			date: '2023-08-01',
 			tags: ['Svelte', 'GPT-4', 'shadcn/ui'],
 			description:
-				'Global, resizable panel that enables home care agencies to manage their workspace with AI. Features include RAG-powered context awareness, function calling for data visualization, file upload analysis, and dynamic generation of custom charts and graphs based on agency data.',
+				'An AI-powered, resizable panel that empowers home care agencies to manage their workspace efficiently. Features include context-aware assistance powered by RAG, function calling for real-time data retrieval and updates, comprehensive file upload analysis, and dynamic generation of custom charts and graphs.',
 			image: {
 				src: '/img/careswitch_assistant_screenshot.png',
 				alt: 'Careswitch AI Assistant screenshot',
