@@ -3,8 +3,22 @@
 
 	const projects = [
 		{
+			title: 'Parerga',
+			date: '2024-11-18',
+			tags: ['AI', 'Archive', 'Notes'],
+			description:
+				'A curated archive showcasing meaningful human-AI conversations, documenting interactions that demonstrate AI capabilities, limitations, and unexpected dimensions.',
+			image: {
+				src: '/img/parerga_screenshot.png',
+				alt: 'Parerga screenshot',
+				orientation: 'landscape',
+				objectPosition: 'top'
+			},
+			url: 'https://parerga.app'
+		},
+		{
 			title: 'HN Push',
-			date: '2024-11-04',
+			date: '2024-10-29',
 			tags: ['PWA', 'Svelte', 'Redis'],
 			description:
 				'Real-time Hacker News notification system built with SvelteKit that uses Web Push API and a cron job to monitor trending stories.',
