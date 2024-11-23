@@ -12,7 +12,7 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({ runtime: 'nodejs20.x' })
+		adapter: adapter({ runtime: 'nodejs22.x' })
 	},
 
 	extensions: ['.svelte', '.svx']

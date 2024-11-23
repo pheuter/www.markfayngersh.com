@@ -21,13 +21,13 @@
 		/>
 	</nav>
 
-	<article class="prose prose-lg prose-zinc mx-auto dark:prose-invert prose-headings:font-semibold">
+	<article class="prose prose-lg prose-zinc dark:prose-invert prose-headings:font-semibold mx-auto">
 		<header>
 			<h1 class="mb-2">{title}</h1>
 			<time datetime={new Date(date).toISOString()} class="text-sm">
 				{formatDate(date)}
 			</time>
-			<hr class="my-4" />
+			<hr />
 		</header>
 
 		{@render children()}
