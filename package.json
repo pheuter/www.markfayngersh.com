@@ -9,7 +9,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^5.4.6",
 		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "next",
 		"mdsvex": "^0.12.0",
@@ -19,6 +19,6 @@
 		"remark-footnotes": "^2.0.0",
 		"svelte": "^5.0.0",
 		"tailwindcss": "next",
-		"vite": "^5.0.3"
+		"vite": "^6"
 	}
 }
