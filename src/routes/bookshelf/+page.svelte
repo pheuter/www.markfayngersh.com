@@ -282,7 +282,7 @@
 						/>
 					</div>
 					<div class="p-4">
-						<h2 class="font-semibold leading-tight">{book.title}</h2>
+						<h2 class="leading-tight font-semibold">{book.title}</h2>
 						<p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{book.author}</p>
 					</div>
 				</div>
