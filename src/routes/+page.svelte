@@ -1,6 +1,6 @@
 <div class="flex min-h-dvh flex-col items-center justify-center">
 	<div class="flex flex-col items-center gap-8 md:flex-row md:gap-16">
-		<img src="/img/mark_profile_blur_small_compressed.webp" alt="Profile" class="size-80" />
+		<img src="/img/mark_outdoors.jpg" alt="Mark outdoors" class="h-auto w-full max-w-80" />
 		<div class="space-y-6 text-center md:text-left">
 			<h1 class="text-4xl font-semibold">Mark Fayngersh</h1>
 			<p class="max-w-md leading-relaxed">
