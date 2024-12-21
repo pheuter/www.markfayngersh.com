@@ -1,18 +1,12 @@
-export const load = async () => {
-	const posts = import.meta.glob('./**/*.svx');
+export const load = () => {
+	const posts = import.meta.glob('./**/*.svx', { eager: true });
 
-	const allPosts = await Promise.all(
-		Object.entries(posts).map(async ([path, importFn]) => {
-			const component = await importFn();
-			const slug = path.match(/\.\/(.+)\/\+page\.svx/)?.[1] ?? '';
+	const allPosts = Object.entries(posts).map(([path, module]) => {
+		const slug = path.match(/\.\/(.+)\/\+page\.svx/)?.[1] ?? '';
+		const { title, date } = module.metadata;
 
-			return {
-				title: component.metadata.title,
-				date: new Date(component.metadata.date),
-				slug
-			};
-		})
-	);
+		return { title, date: new Date(date), slug };
+	});
 
 	return {
 		posts: allPosts.sort((a, b) => b.date.getTime() - a.date.getTime())

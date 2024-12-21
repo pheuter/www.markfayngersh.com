@@ -14,7 +14,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<div class="mx-auto max-w-prose px-4 py-8">
+<div class="mx-auto max-w-3xl px-8 py-8">
 	<nav class="mb-8">
 		<Breadcrumbs
 			items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/posts' }, { label: title }]}
@@ -27,7 +27,7 @@
 			<time datetime={new Date(date).toISOString()} class="text-sm">
 				{formatDate(date)}
 			</time>
-			<hr />
+			<hr class="!my-4" />
 		</header>
 
 		{@render children()}
