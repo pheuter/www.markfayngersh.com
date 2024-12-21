@@ -1,0 +1,87 @@
+---
+title: Artificial General Software
+date: 2024-12-21
+---
+
+The quest for artificial general intelligence has shaped the imagination of computer scientists for decades—a hypothetical system capable of matching or exceeding human-level performance across any cognitive task. While debate continues about AGI's feasibility and timeline, a parallel revolution quietly unfolds: the emergence of artificial general software. As language models grow in capability and scope, we approach an inflection point where specialized applications give way to general-purpose AI agents capable of executing any computational task through natural interaction.
+
+### The End of Specialization
+
+Traditional software development follows a pattern of progressive specialization. Each application carves out its niche, carefully translating domain expertise into digital workflows. Project management tools encode methodologies of task organization. Design software crystallizes principles of visual manipulation. Financial platforms embed rules of accounting and analysis. This specialization has served us well, allowing software to penetrate every corner of human endeavor. But it comes at a cost: fragmentation of functionality, learning curves for each new tool, and artificial boundaries between related tasks.
+
+Consider the contemporary digital workplace: a knowledge worker might navigate between Slack for communication, Asana for project management, Google Docs for document creation, Figma for design work, and Notion for knowledge management. Each transition represents a context switch, each tool demands its own cognitive overhead. This fragmentation isn't merely inconvenient—it fundamentally constrains our ability to work fluidly across domains.
+
+The "bitter lesson" in machine learning, articulated by Rich Sutton, suggests that general methods leveraging computation will ultimately triumph over hand-crafted specialized approaches. This principle, originally focused on machine learning algorithms, extends naturally to software architecture itself. Just as AGI promises to supersede narrow AI systems, general software threatens to obviate the need for specialized applications.
+
+### The Architecture of Generality
+
+Consider how traditional SaaS applications operate: they present carefully designed interfaces that decompose complex tasks into manageable interactions. Each button, form, and workflow represents a distillation of domain knowledge into discrete computational steps. This reduction, while necessary for traditional interfaces, imposes significant cognitive overhead. Users must learn each application's particular dialect of interaction, translating their intentions into the software's constrained vocabulary of actions.
+
+The evolution of software interfaces illustrates this constraint. From command-line interfaces to graphical user interfaces to modern web applications, each iteration has attempted to make computer operations more intuitive. Yet even the most refined modern interfaces still require users to map their intentions onto predetermined paths of interaction. A designer wanting to modify an image must navigate through menus of tools and parameters, each representing a simplified abstraction of underlying image manipulation operations.
+
+AI agents invert this relationship. Rather than users adapting to software interfaces, these agents adapt to user intentions. The transformation is profound: instead of navigating through predetermined workflows, users simply express their needs in natural language. The agent, drawing on vast reserves of training data and sophisticated language understanding, executes the appropriate actions directly.
+
+For instance, rather than learning Photoshop's complex interface to remove a background from an image, a user might simply say "remove the background from this photo and make it transparent." Instead of navigating through project management software to set up a new initiative, they might state "create a new project for the Q1 marketing campaign with standard milestones and team assignments." The interface dissolves into natural conversation.
+
+This shift renders traditional interface design philosophies not just obsolete, but actively counterproductive. The principles that govern good UI design—consistency, predictability, visual hierarchy—become secondary concerns when the interface dissolves into natural conversation. The primary challenge shifts from designing intuitive interfaces to developing agents that can accurately interpret and execute human intent.
+
+### The Economics of Generality
+
+This architectural transformation precipitates an equally dramatic economic shift. Traditional SaaS businesses build moats through user familiarity, switching costs, and network effects—all predicated on the persistence of their unique interfaces and specialized functionality. But when the interface becomes natural language and the underlying capability derives from foundation models, these traditional vectors of differentiation begin to erode.
+
+Consider the current landscape of productivity software. Companies like Adobe, Atlassian, and Microsoft maintain their market positions through complex ecosystems of interrelated tools, each with its own learning curve and user base. The switching costs are high: moving from Photoshop to an alternative involves not just learning new interfaces but potentially disrupting entire workflows and team collaborations.
+
+But in a world of artificial general software, these barriers diminish. When the interface is natural language and the underlying capabilities are provided by foundation models, the traditional vectors of lock-in become less relevant. The competitive landscape shifts from feature sets and interface design to the quality of understanding and execution.
+
+This transformation echoes previous technological disruptions. Just as cloud computing commoditized infrastructure and APIs democratized service integration, general software threatens to commoditize application interfaces themselves. The value proposition moves up the stack, from providing specific functionality to orchestrating and executing complex sequences of actions across domains.
+
+### The Transition Period
+
+The path to general software will mirror the evolutionary pattern of previous technological transitions. First, AI agents will augment existing interfaces, appearing as intelligent assistants within traditional applications. Gradually, these agents will subsume more functionality until the traditional interface becomes secondary. Finally, the specialized interface may disappear entirely, replaced by direct interaction with increasingly capable AI agents.
+
+We can already observe this progression in contemporary software. Consider GitHub Copilot's evolution from code completion tool to pair programmer, or ChatGPT's transition from conversational AI to a general-purpose interface for computational tasks. These early examples hint at a future where the boundary between user and system becomes increasingly fluid.
+
+This progression raises profound questions about the nature of software development itself. When applications become dynamic interpretations of intent rather than static implementations of functionality, what remains of traditional software engineering? The answer likely lies in a shift from building specific solutions to developing and refining the capabilities of general AI agents.
+
+The role of developers will evolve accordingly. Rather than implementing specific features or workflows, they may focus on enhancing the agent's understanding of domains, improving its execution capabilities, and ensuring reliability and safety across a broader range of operations. This mirrors the transition in machine learning from feature engineering to architecture design and prompt engineering.
+
+### The Human Element
+
+The emergence of general software introduces new challenges in human-computer interaction. Traditional interfaces, for all their limitations, provide explicit boundaries of possibility. They make clear what actions are available and what outcomes are achievable. Natural language interaction with AI agents, while more fluid, introduces ambiguity about capabilities and limitations.
+
+This ambiguity echoes themes from [The Thinking Placebo](/posts/the-thinking-placebo) - just as we grapple with questions about machine cognition, we must now confront uncertainties about machine capability and agency. When a user instructs an AI agent to "improve this document," what exactly can they expect? The answer depends not just on the agent's capabilities but on the user's ability to form accurate mental models of those capabilities.
+
+This challenge demands new approaches to user education and expectation management. How do users develop accurate mental models of AI agent capabilities? How do we maintain user agency when the mechanisms of action are increasingly obscured? These questions echo earlier debates about abstraction in computing, but with stakes amplified by the unprecedented capability of modern AI systems.
+
+The solution may lie in developing new frameworks for human-AI collaboration that acknowledge both the power and limitations of general software. This might include:
+
+- Explicit capability boundaries that help users understand what is and isn't possible
+- Progressive disclosure of complexity that allows users to dive deeper when needed
+- Feedback mechanisms that help users refine their interaction patterns
+- Safety guards that prevent unintended consequences of ambiguous instructions
+
+### A New Era
+
+The rise of artificial general software marks a fundamental shift in how we conceive of and interact with computers. Just as AGI promises to transform the landscape of intelligence, general software promises to reshape the architecture of computation itself. The end of specialized applications signals not the death of software, but its evolution into a more fluid and capable form.
+
+This transformation connects directly to the ethical considerations raised in [The Human Problem](/posts/the-human-problem). As software becomes more general and more capable, questions of alignment and values become increasingly critical. How do we ensure that general software agents act in accordance with human values and intentions? How do we handle disagreements about what those values should be?
+
+As we stand at this threshold, we would do well to remember that every major advance in computing has been met with similar mixtures of anticipation and apprehension. The dissolution of traditional software boundaries may seem radical, but it represents the natural culmination of computing's long journey toward ever more natural human-computer interaction.
+
+The age of artificial general software beckons—not with the promise of simplifying computing, but with the prospect of making it as complex and nuanced as human intention itself. In this new paradigm, the most successful software will be that which most faithfully translates human purpose into computational action, bridging the final gap between human intent and machine execution.
+
+### Looking Forward
+
+As we navigate this transition, several key areas deserve particular attention:
+
+1. **Interface Evolution**: How will the role of visual interfaces evolve as natural language becomes the primary means of interaction? Rather than disappearing entirely, they may evolve into dynamic visualizations of agent understanding and action.
+
+2. **Capability Assessment**: How do we measure and communicate the capabilities of general software systems? Traditional metrics of feature completeness become less relevant when capabilities are fluid and context-dependent.
+
+3. **Security and Privacy**: How do we maintain security and privacy when software boundaries become fluid? The traditional model of application isolation may need to evolve for systems that can act across domains.
+
+4. **Economic Disruption**: How will the software industry adapt to a world where traditional application boundaries dissolve? New business models may emerge around capability provision and orchestration rather than specific functionality.
+
+5. **Educational Impact**: How do we prepare the next generation of software developers and users for a world of general software? Traditional software education may need to shift focus from specific tools to general principles of human-AI collaboration.
+
+The advent of artificial general software represents not just a technological shift but a fundamental reimagining of the relationship between humans and computers. As we navigate this transition, we must remain mindful of both the tremendous opportunities and the significant challenges it presents. The future of software lies not in ever-more-specialized tools but in systems that can adapt themselves to the full range of human intent and purpose.
