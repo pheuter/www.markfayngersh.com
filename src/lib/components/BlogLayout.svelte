@@ -14,7 +14,7 @@
 	<title>{title}</title>
 </svelte:head>
 
-<div class="mx-auto max-w-3xl px-8 py-8">
+<div class="mx-auto max-w-3xl px-4 py-8 md:px-8">
 	<nav class="mb-8">
 		<Breadcrumbs
 			items={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/posts' }, { label: title }]}
