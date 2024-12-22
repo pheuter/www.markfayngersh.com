@@ -10,11 +10,12 @@ const config = {
 			remarkPlugins: [remarkFootnotes]
 		})
 	],
-
 	kit: {
-		adapter: adapter({ runtime: 'nodejs22.x' })
+		adapter: adapter({ runtime: 'nodejs22.x' }),
+		output: {
+			bundleStrategy: 'inline'
+		}
 	},
-
 	extensions: ['.svelte', '.svx']
 };
 
