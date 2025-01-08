@@ -3,6 +3,13 @@
 
 	const books = [
 		{
+			title: 'Christian Atheism',
+			author: 'Slavoj Žižek',
+			coverImage:
+				'https://books.google.com/books/content?id=wBb_EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+			url: 'https://books.google.com/books?id=wBb_EAAAQBAJ'
+		},
+		{
 			title: 'SPQR',
 			author: 'Mary Beard',
 			coverImage:
