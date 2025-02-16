@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
 
 	const books = [
