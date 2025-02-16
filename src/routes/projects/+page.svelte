@@ -106,7 +106,7 @@
 				</div>
 				<div class="relative">
 					<div class="flex items-center gap-x-4 text-xs">
-						<time datetime={project.date} class="text-zinc-500 dark:text-zinc-400">
+						<time datetime={project.date} class="text-stone-500 dark:text-stone-400">
 							{new Date(project.date).toLocaleDateString('en-US', {
 								timeZone: 'UTC',
 								year: 'numeric',
@@ -116,7 +116,7 @@
 						<div class="flex flex-wrap gap-2">
 							{#each project.tags as tag}
 								<span
-									class="rounded-full bg-zinc-100 px-3 py-1.5 font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+									class="rounded-full bg-stone-100 px-3 py-1.5 font-medium text-stone-600 dark:bg-stone-800 dark:text-stone-400"
 								>
 									{tag}
 								</span>
@@ -126,12 +126,12 @@
 					<div class="relative max-w-xl">
 						<a href={project.url} class="group block" target="_blank" rel="noopener noreferrer">
 							<h3
-								class="mt-3 text-xl/6 font-semibold transition-colors group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
+								class="mt-3 font-serif text-3xl/6 font-semibold transition-colors group-hover:text-stone-600 dark:group-hover:text-stone-300"
 							>
 								{project.title}
 							</h3>
 						</a>
-						<p class="mt-5 text-sm/6 text-zinc-600 dark:text-zinc-400">
+						<p class="mt-5 text-stone-600 dark:text-stone-400">
 							{project.description}
 						</p>
 					</div>

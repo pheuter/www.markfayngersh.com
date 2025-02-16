@@ -1,2 +1,14 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'acumin-pro', ui-sans-serif, system-ui, sans-serif;
+	--font-serif:
+		'source-serif-4-display', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+@layer base {
+	body {
+		@apply min-h-dvh bg-stone-50 text-stone-950 antialiased dark:bg-stone-950 dark:text-stone-50;
+	}
+}
