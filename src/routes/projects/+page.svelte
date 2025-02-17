@@ -80,7 +80,7 @@
 	</nav>
 	<div class="space-y-20">
 		{#each projects as project}
-			<article class="relative flex flex-col gap-8 lg:flex-row">
+			<article class="group relative flex flex-col gap-8 lg:flex-row">
 				<div
 					class="relative lg:w-[400px] {project.image.orientation === 'portrait'
 						? 'aspect-[4/5]'
@@ -88,7 +88,7 @@
 				>
 					<a
 						href={project.url}
-						class="group block h-full"
+						class="block h-full"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label={`Visit ${project.title}`}
@@ -96,7 +96,7 @@
 						<img
 							src={project.image.src}
 							alt={project.image.alt}
-							class="absolute inset-0 h-full w-full rounded-2xl object-cover transition-opacity group-hover:opacity-90
+							class="border-yin-1/60 dark:border-yin-8/60 absolute inset-0 h-full w-full rounded-2xl border object-cover transition-opacity group-hover:opacity-90
 							{project.image.objectPosition === 'left' ? 'object-left' : ''}
 							{project.image.objectPosition === 'right' ? 'object-right' : ''}
 							{project.image.objectPosition === 'top' ? 'object-top' : ''}
@@ -106,7 +106,7 @@
 				</div>
 				<div class="relative">
 					<div class="flex items-center gap-x-4 text-xs">
-						<time datetime={project.date} class="text-stone-500 dark:text-stone-400">
+						<time datetime={project.date}>
 							{new Date(project.date).toLocaleDateString('en-US', {
 								timeZone: 'UTC',
 								year: 'numeric',
@@ -115,23 +115,21 @@
 						</time>
 						<div class="flex flex-wrap gap-2">
 							{#each project.tags as tag}
-								<span
-									class="rounded-full bg-stone-100 px-3 py-1.5 font-medium text-stone-600 dark:bg-stone-800 dark:text-stone-400"
-								>
+								<span class="bg-yin-1/40 dark:bg-yin-9 rounded-full px-3 py-1.5 font-medium">
 									{tag}
 								</span>
 							{/each}
 						</div>
 					</div>
 					<div class="relative max-w-xl">
-						<a href={project.url} class="group block" target="_blank" rel="noopener noreferrer">
+						<a href={project.url} class="block" target="_blank" rel="noopener noreferrer">
 							<h3
-								class="mt-3 font-serif text-3xl/6 font-semibold transition-colors group-hover:text-stone-600 dark:group-hover:text-stone-300"
+								class="group-hover:text-yin-7 dark:group-hover:text-yin-2 mt-3 font-serif text-3xl/6 font-semibold transition-colors"
 							>
 								{project.title}
 							</h3>
 						</a>
-						<p class="mt-5 text-stone-600 dark:text-stone-400">
+						<p class="text-yin-9 dark:text-yang mt-5">
 							{project.description}
 						</p>
 					</div>

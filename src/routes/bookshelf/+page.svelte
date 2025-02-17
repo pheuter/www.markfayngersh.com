@@ -279,7 +279,7 @@
 		{#each books as book}
 			<a href={book.url} class="group">
 				<div
-					class="h-full overflow-hidden rounded-md bg-white shadow transition-all hover:shadow-lg dark:border dark:border-stone-800 dark:bg-transparent"
+					class="dark:border-yin-8 h-full overflow-hidden rounded-md border border-transparent bg-white shadow transition-all hover:shadow-lg dark:bg-transparent"
 				>
 					<div class="aspect-[2/3] overflow-hidden">
 						<img
@@ -290,7 +290,7 @@
 					</div>
 					<div class="p-4">
 						<h2 class="leading-tight font-semibold">{book.title}</h2>
-						<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">{book.author}</p>
+						<p class="text-yin-7 dark:text-yin-2 mt-1 text-sm">{book.author}</p>
 					</div>
 				</div>
 			</a>

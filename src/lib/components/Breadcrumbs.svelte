@@ -6,13 +6,13 @@
 	let { items }: Props = $props();
 </script>
 
-<ol class="flex items-center space-x-2 text-sm text-stone-600 dark:text-stone-400">
+<ol class="flex items-center space-x-2 text-sm">
 	{#each items as item, i}
 		<li>
 			{#if item.href}
-				<a href={item.href} class="hover:text-stone-900 dark:hover:text-stone-200">{item.label}</a>
+				<a href={item.href} class="text-blue-5 dark:text-blue-4">{item.label}</a>
 			{:else}
-				<span class="font-medium text-stone-900 dark:text-stone-200">{item.label}</span>
+				<span class="">{item.label}</span>
 			{/if}
 		</li>
 

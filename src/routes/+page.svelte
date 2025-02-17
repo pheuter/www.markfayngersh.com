@@ -8,10 +8,12 @@
 				worked on a collaborative care platform at Quartet Health and researched interactions for large,
 				distributed audiences at the MIT Media Lab.
 			</p>
-			<div class="flex items-center justify-center gap-6 md:justify-start">
-				<a href="/posts" class="font-medium underline">Blog</a>
-				<a href="/bookshelf" class="font-medium underline">Bookshelf</a>
-				<a href="/projects" class="font-medium underline">Projects</a>
+			<div
+				class="text-blue-5 dark:text-blue-4 flex items-center justify-center gap-6 md:justify-start"
+			>
+				<a href="/posts" class="">Blog</a>
+				<a href="/bookshelf" class="">Bookshelf</a>
+				<a href="/projects" class="">Projects</a>
 			</div>
 		</div>
 	</div>

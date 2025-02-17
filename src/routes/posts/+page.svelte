@@ -17,19 +17,16 @@
 
 	<ul
 		role="list"
-		class="divide-y divide-stone-200 overflow-hidden rounded-md bg-white shadow dark:divide-stone-800 dark:border dark:border-stone-800 dark:bg-transparent"
+		class="divide-yin-1 dark:divide-yin-8 dark:border-yin-8 divide-y overflow-hidden rounded-md bg-[white] shadow dark:border dark:bg-transparent"
 	>
 		{#each data.posts as post}
 			<li>
 				<a
 					href="/posts/{post.slug}"
-					class="block px-6 py-4 transition-colors hover:bg-stone-100 dark:hover:bg-stone-900"
+					class="hover:bg-yin-1/20 dark:hover:bg-yin-9 block px-6 py-4 transition-colors"
 				>
-					<h2 class="text-lg font-bold">{post.title}</h2>
-					<time
-						datetime={post.date.toISOString()}
-						class="mt-2 block text-stone-600 dark:text-stone-400"
-					>
+					<h2 class="text-lg">{post.title}</h2>
+					<time datetime={post.date.toISOString()} class="text-yin-6 dark:text-yin-4 mt-2 block">
 						{formatDate(post.date)}
 					</time>
 				</a>
