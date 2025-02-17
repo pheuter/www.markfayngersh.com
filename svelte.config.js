@@ -13,10 +13,7 @@ const config = {
 		})
 	],
 	kit: {
-		adapter: adapter({ runtime: 'nodejs22.x' }),
-		output: {
-			bundleStrategy: 'inline'
-		}
+		adapter: adapter({ runtime: 'nodejs22.x' })
 	},
 	extensions: ['.svelte', '.svx']
 };
